@@ -101,6 +101,18 @@ main section.left{
 main section.right{
     flex-direction: row-reverse;
 }
+main section.center{
+    flex-direction:column;
+    justify-content: center;
+}
+main section.center h1,
+main section.center h2,
+main section.center h3{
+    text-align:center;
+}
+main section.center img{
+    margin:3rem;
+}
 
 main section:nth-child(2n+1){
     background:rgb(255, 255, 255);
@@ -114,6 +126,7 @@ main section:nth-child(2n){
 
 main section .fbe-descriptions{
     text-align:left;
+    margin:0 2rem;
 }
 
 
@@ -128,6 +141,7 @@ main section h3{
     font-size:2.75em;
     text-align: left;
     margin:0;
+    align-items: center;
 }
 
 
@@ -167,9 +181,11 @@ main section h3{
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
         opacity:0.99;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
     }
     header > ul:hover{
         transition:0.75s;
+
     }
     header > div > img{
         display:none;
@@ -189,6 +205,13 @@ main section h3{
     main section img{
         margin:2rem 0;
     }
+    /*タイトル*/
+    main section h1,
+    main section h2,
+    main section h3{
+        text-align: center;
+    }
+
 
 }
 
