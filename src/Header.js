@@ -9,11 +9,11 @@ const Header = ()=>{
                 </div>
                 <ul>
                     <li><a href="index.html">トップ</a></li>
-                    <li><a href="">ダウンロード</a></li>
-                    <li><a href="">機能</a></li>
-                    <li><a href="">マニュアル</a></li>
-                    <li><a href="">問い合わせ</a></li>
-                    <li><a href="">クレジット</a></li>
+                    <li><a href="index.html">ダウンロード</a></li>
+                    <li><a href="index.html">機能</a></li>
+                    <li><a href="index.html">マニュアル</a></li>
+                    <li><a href="index.html">問い合わせ</a></li>
+                    <li><a href="index.html">クレジット</a></li>
                 </ul>
 
             </header>
