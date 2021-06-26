@@ -21,6 +21,36 @@ body{
     padding:0;
     background:#f5fbef;
 }
+/*ペイン*/
+.pane{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    opacity:1;
+    z-index:10000;
+    background:black;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:3rem;
+    animation: paneAni 0.7s ease 0.5s 1 alternate forwards running;
+}
+@keyframes paneAni {
+    0% {
+        opacity:1;
+        z-index:10000;
+    }
+    99.99% {
+        z-index:10000;
+    }
+    100% {
+        opacity:0;
+        z-index: -1;
+    }
+}  
 /*ヘッダー*/
 header,header *{
     display: flex;
@@ -42,7 +72,7 @@ header{
     z-index: 9999;
 }
 header img{
-    width:2.5rem;
+    width:2.9rem;
 }
 header b{
     color:#9d69a3;
@@ -64,7 +94,7 @@ header > ul > li{
 header > ul > li > a{
     color:black;
     text-decoration: none;
-    width:90%;
+    font-size:0.9em;
 }
 header > ul > li > a:hover,
 header > ul > li:hover{
@@ -93,7 +123,9 @@ main section{
     position:relative;
 }
 main section:first-child{
-    margin-top: 1.5rem;
+    /*marginかpaddingか*/
+    margin-top: 2rem;
+    padding-top: 2.9rem;
 }
 main section.left,
 main section.right{
@@ -132,6 +164,9 @@ main section .fbe-descriptions{
     text-align:left;
     margin:0 2rem;
 }
+main section.center .fbe-descriptions{
+    text-align: center;
+}
 
 
 /*画像*/
@@ -147,6 +182,31 @@ main section h3{
     margin:0;
     align-items: center;
 }
+/*ボタン*/
+.fbe-button{
+    margin: 1rem auto;
+    width: 70%;
+    background:white;
+    border: solid 3px #9d69a3;
+    color:#9d69a3;
+    display: inline-block;
+    padding:0.1rem 1rem ;
+    transition: 0.2s;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    text-decoration: none;
+}
+.fbe-button:hover{
+    background:#9d69a3;
+    border: solid 3px #9d69a3;
+    color:white;
+    transition: 0.2s;
+}
+.fbe-button:active{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,1);
+    transition: 0.1s;
+}
 
 
 
@@ -155,7 +215,6 @@ main section h3{
     header{
         justify-content: center;
         z-index: 9999;
-        
     }
     header > ul{
         position:absolute;

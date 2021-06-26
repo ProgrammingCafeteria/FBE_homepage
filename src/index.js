@@ -17,13 +17,11 @@ function draw(jsx,selector){
     );
   });
 }
-/*
-ReactDOM.render(
-  <Header />,
-  document.getElementById("header")
-);
-*/
 
+/* 設定 */
+const loadingFlg = true ;
+
+/* 描画 */
 draw(<Header />,"#header");
 draw(<Footer />,"#footer");
 
