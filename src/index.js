@@ -1,17 +1,31 @@
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
+import Header from './Header';
+import Footer from './Footer';
 import reportWebVitals from './reportWebVitals';
 
+function draw(jsx,selector){
+  const eles = document.querySelectorAll(selector);
+  eles.forEach(ele=>{
+    ReactDOM.render(
+      jsx,
+      ele
+    );
+  });
+}
+/*
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Header />,
+  document.getElementById("header")
 );
+*/
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+draw(<Header />,"#header");
+draw(<Footer />,"#footer");
+
+
 reportWebVitals();
