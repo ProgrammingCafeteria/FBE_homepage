@@ -219,7 +219,7 @@ main section h3{
     transition: 0.2s;
 }
 .fbe-button:active{
-    box-shadow: 0 0 -10px 0 rgba(0,0,0,1);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,1);
     transition: 0.1s;
 }
 

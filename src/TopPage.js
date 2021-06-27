@@ -15,9 +15,12 @@ const Top = ()=>{
             <Section 
              type="right"
              title={<>作りやすさと 実行しやすさ</>}
-             imgPath="img/background.png">
+             text={<>
                 FlowchartBuildExecutor(FBE)はフローチャートを通して アルゴリズムやプログラミングを 学ぶすべての人に向けて 
                 サクッと作って実行ができるように 様々な仕組みが用意されています！
+             </>}
+             imgPath="img/background.png">
+                
             </Section>
             
             
