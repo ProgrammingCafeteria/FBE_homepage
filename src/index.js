@@ -19,7 +19,7 @@ function draw(jsx,selector){
 }
 
 /* 設定 */
-const loadingFlg = true ;
+
 
 /* 描画 */
 draw(<Header />,"#header");
