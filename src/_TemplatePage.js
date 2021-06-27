@@ -1,6 +1,6 @@
 import Section from "./Section" ;
 
-const Top = ()=>{
+const PageTemplate = ()=>{
     return (
         <>
             <Section
@@ -19,18 +19,21 @@ const Top = ()=>{
                     </>
 
             </Section>
+
             <Section title="type" imgPath="img/background.png">
                 left,right,centerを指定する。デフォルトはleft。
             </Section>
+
             <Section title="title" imgPath="img/background.png">
                 タイトルを指定する。
             </Section>
+
             <Section title="imgPath" imgPath="img/background.png">
                 index.htmlからの画像のパスを指定する。
             </Section>
+            
         </>
     ) ;
 };
 
-export default Top ;
-
+export default PageTemplate ;

@@ -9,9 +9,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 /* ページコンポーネント */
-import Top from "./Top" ;
-import PageTemplate from "./PageTemplate" ;
-import Unknown from "./Unknown" ;
+import TopPage from "./TopPage" ;
+import _TemplatePage from "./_TemplatePage" ;
+import UnknownPage from "./UnknownPage" ;
 
 
 /* 設定 */
@@ -24,10 +24,10 @@ ReactDOM.render(
     <main>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Top} />
-          <Route exact path="/top" component={Top} />
-          <Route exact path="/template" component={PageTemplate} />
-          <Route exact path="/:id" component={Unknown} />
+          <Route exact path="/" component={TopPage} />
+          <Route exact path="/top" component={TopPage} />
+          <Route exact path="/template" component={_TemplatePage} />
+          <Route exact path="/:path" component={UnknownPage} />
         </Switch>
       </BrowserRouter>
     </main>

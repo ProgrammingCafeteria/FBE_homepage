@@ -1,6 +1,6 @@
 const Section = (props)=>{
     const type = props.type ? props.type : "left" ;
-    console.log(props);
+    const text = props.children ? props.children : props.text ? props.text : "" ;
     return (
         <section className={type}>
             <div>
@@ -8,7 +8,7 @@ const Section = (props)=>{
                     {props.title}
                 </h1>
                 <div className="fbe-description">
-                    {props.children}
+                    {text}
                 </div>
             </div>
             <div>
