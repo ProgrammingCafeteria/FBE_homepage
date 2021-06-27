@@ -9,7 +9,7 @@
 
 */
 
-/*全体*/
+/*全体,汎用*/
 html{
     margin:0;
     padding:0;
@@ -24,6 +24,15 @@ body{
 img{
     width:auto;
     height:auto;
+}
+.text-align-center{
+    text-align: center;
+}
+.text-align-left{
+    text-align: center;
+}
+.text-align-left{
+    text-align: center;
 }
 /*ペイン*/
 .pane{
@@ -128,7 +137,7 @@ main section{
 }
 main section:first-child{
     /*marginかpaddingか*/
-    margin-top: 2rem;
+    margin-top: 0.0rem;
     padding-top: 2.9rem;
 }
 main section.left,
@@ -201,6 +210,7 @@ main section h3{
     -moz-user-select: none;
     -webkit-user-select: none;
     text-decoration: none;
+    text-align: center;
 }
 .fbe-button:hover{
     background:#9d69a3;
@@ -209,7 +219,7 @@ main section h3{
     transition: 0.2s;
 }
 .fbe-button:active{
-    box-shadow: 0 0 10px 0 rgba(0,0,0,1);
+    box-shadow: 0 0 -10px 0 rgba(0,0,0,1);
     transition: 0.1s;
 }
 
@@ -280,6 +290,7 @@ main section h3{
     main section h3{
         text-align: center;
     }
+
 
 
 }

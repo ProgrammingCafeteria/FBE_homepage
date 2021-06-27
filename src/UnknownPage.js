@@ -1,14 +1,15 @@
 import Section from "./Section" ;
 
-const Unknown = ()=>{
+const Unknown = (props)=>{
+    console.log(props.match.params.path);
+    const pageName = props.match.params.path ;
     return (
         <>
             <Section
              type="center"
              title="不明なページ"
-             imgPath="img/background.png">
-                 不正なURLです。<a href="/">トップに戻る</a>
-            </Section>
+             text={<>"{pageName}"は不正なURLです。<a href="/">トップに戻る</a></>}
+            />
 
         </>
     ) ;

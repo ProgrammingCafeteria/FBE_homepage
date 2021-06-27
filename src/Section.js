@@ -1,6 +1,9 @@
 const Section = (props)=>{
     const type = props.type ? props.type : "left" ;
-    const text = props.children ? props.children : props.text ? props.text : "" ;
+    const text = props.text ;
+    const afterText = props.afterText ;
+
+    const imgDiv = props.imgPath ? <div> <img src={props.imgPath} alt="errot" /></div> : "";
     return (
         <section className={type}>
             <div>
@@ -10,10 +13,9 @@ const Section = (props)=>{
                 <div className="fbe-description">
                     {text}
                 </div>
+                {afterText}
             </div>
-            <div>
-                <img src={props.imgPath} alt="error"></img>
-            </div>
+            {imgDiv}
         </section>
 
     ) ;

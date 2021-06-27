@@ -1,31 +1,23 @@
 import Section from "./Section" ;
+import LinkButton from "./LinkButton" ;
 
 const Top = ()=>{
     return (
         <>
             <Section 
-             type="center"
-             title={<b>FlowChartBuilder</b>}
-             imgPath="img/background.png">
-                FBEを使うとフローチャートを作って実行できます！FBEを使ってアルゴリズムの勉強をしましょう！
-            </Section>
-            
-            <Section 
              type="left"
-             title={<>作るフローチャート</>}
-             imgPath="img/background.png">
-                フローチャートをボタンを押して作成しましょう。
-                ドラッグアンドドロップする必要はないのでより作成しやすくなっています。
-                それも面倒な人のために<b>最初から数多くのテンプレート</b>を用意しています。
+             title={<b>Flowchart<br />Build<br />Executor</b>}
+             imgPath="img/background.png"
+             text={<>FBEを使えば オリジナルのフローチャートを作成するだけでなく 実行することが出来ます<br />アルゴリズムの学習などに役立ててください！</>}
+             afterText={<LinkButton text="今すぐダウンロードする" href="./download" />}
+             >
             </Section>
-            
             <Section 
              type="right"
-             title={<>動くフローチャート</>}
+             title={<>作りやすさと 実行しやすさ</>}
              imgPath="img/background.png">
-                作ったフローチャートは簡単に実行ができます。
-                フローチャートをプログラムに直すことなく<b>フローチャートのまま実行</b>できます。
-                様々な実行タイプがあるため、<b>表示方法</b>も選ぶことが出来ます。
+                FlowchartBuildExecutor(FBE)はフローチャートを通して アルゴリズムやプログラミングを 学ぶすべての人に向けて 
+                サクッと作って実行ができるように 様々な仕組みが用意されています！
             </Section>
             
             
