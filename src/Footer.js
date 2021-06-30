@@ -2,7 +2,7 @@
 const Footer = ()=>{
     return (
         <footer>
-            FBE
+            <h3>Flowchart Build Executor</h3>
         </footer>
     );
 };
