@@ -2,7 +2,7 @@ import Section from "./Section" ;
 import LinkButton from "./LinkButton" ;
 
 const UnknownPage = (props)=>{
-    console.log(props.match.params.path);
+    console.error("not valid url : "+props.match.params.path);
     const pageName = props.match.params.path ;
     return (
         <>
@@ -18,4 +18,5 @@ const UnknownPage = (props)=>{
 };
 
 export default UnknownPage ;
+
 

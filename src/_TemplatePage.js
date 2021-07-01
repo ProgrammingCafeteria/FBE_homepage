@@ -1,4 +1,5 @@
 import Section from "./Section" ;
+import "./css/_TemplatePage.css" ;
 
 const PageTemplate = ()=>{
     return (
