@@ -1,19 +1,17 @@
+
+
 const Section = (props)=>{
     const type = props.type ? props.type : "left" ;
-    const text = props.text ;
-    const afterText = props.afterText ;
-
-    const imgDiv = props.imgPath ? <div> <img src={props.imgPath} alt="errot" /></div> : "";
+    let imgDiv = "" ;
+    if(props.imgPath){
+        imgDiv = <div> <img src={props.imgPath} alt="errot" /></div> ;
+    }
     return (
         <section className={type}>
             <div>
-                <h1>
-                    {props.title}
-                </h1>
                 <div className="fbe-description">
-                    {text}
+                    {props.children}
                 </div>
-                {afterText}
             </div>
             {imgDiv}
         </section>
@@ -22,3 +20,6 @@ const Section = (props)=>{
 };
 
 export default Section ;
+
+
+
