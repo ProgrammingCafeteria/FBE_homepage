@@ -5,7 +5,7 @@ const UnknownPage = (props)=>{
     console.error("not valid url : "+props.match.params.path);
     const pageName = props.match.params.path ;
     return (
-        <>
+        <main>
             <Section type="center" >
                 {<>
                     <h1>不明なページ</h1>
@@ -13,7 +13,7 @@ const UnknownPage = (props)=>{
                     <LinkButton text="トップに戻る" href="./top" />
                 </>}
             </Section>
-        </>
+        </main>
     ) ;
 };
 

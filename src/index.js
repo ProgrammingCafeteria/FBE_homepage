@@ -23,16 +23,14 @@ import UnknownPage from "./pages/UnknownPage" ;
 ReactDOM.render(
   <>
     <Header />
-    <main>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={TopPage} />
-          <Route exact path="/top" component={TopPage} />
-          <Route exact path="/template" component={_TemplatePage} />
-          <Route exact path="/:path" component={UnknownPage} />
-        </Switch>
-      </BrowserRouter>
-    </main>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={TopPage} />
+        <Route exact path="/top" component={TopPage} />
+        <Route exact path="/template" component={_TemplatePage} />
+        <Route exact path="/:path" component={UnknownPage} />
+      </Switch>
+    </BrowserRouter>
     <Footer />
   </>,
   document.getElementById("root")

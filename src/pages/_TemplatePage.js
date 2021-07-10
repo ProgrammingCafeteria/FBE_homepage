@@ -4,7 +4,7 @@ import background from "../img/background.png" ;
 
 const PageTemplate = ()=>{
     return (
-        <>
+        <main>
             <Section type="left" >
                 <h1>Sectionコンポーネントの使い方について</h1>
                 Sectionコンポーネントは基本的なページセクションのテンプレートを提供します。以下の属性を指定してください。
@@ -16,9 +16,9 @@ const PageTemplate = ()=>{
                         imgPath属性には画像のパスを指定してください。画像をあらかじめimportしておいてそれを渡すと良いでしょう。
                         <p>
                             例：    <br />
-                            <code>import img from "../img/img.png"</code>   <br />
-                            ：：：<br />
-                            <code>&lt;Section imgPath="" &gt;...</code>
+                            <code>import img from "../img/img.png"      <br /><br />
+                            ：：：                                      <br /><br />
+                            &lt;Section imgPath="" &gt;...</code>       <br />
                         </p>
                         画像を表示する必要のない場合は指定しないでください。
                         <p>
@@ -49,6 +49,20 @@ const PageTemplate = ()=>{
             </Section>
 
             <Section type="left">
+                <h1> ページの作成について </h1>
+                ページコンポーネントの構成は次のようにしてください。CSSなどが上手く反映されない可能性があります。
+                <p>
+                    <table>
+                        <tr><td>ページコンポーネント</td>      <td>必須</td></tr>
+                        <tr><td>+mainタグ</td>               <td>必須</td></tr>
+                        <tr><td>++Sectionコンポーネント</td>  <td>複数可</td></tr>
+                        <tr><td>+asideタグ</td>              <td>省略可</td></tr>
+                    </table>
+                </p>
+
+            </Section>
+
+            <Section type="left">
                 <h1>各属性の使用例</h1>
             </Section>
             <Section type="left" imgPath={background}>
@@ -64,7 +78,7 @@ const PageTemplate = ()=>{
                 こんな感じに説明を書くと説明が"中央"に配置されます。
             </Section>
             
-        </>
+        </main>
 
     ) ;
 };

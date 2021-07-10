@@ -3,7 +3,7 @@ import LinkButton from "../components/LinkButton" ;
 
 const Top = ()=>{
     return (
-        <>
+        <main>
             <Section type="left" imgPath="img/background.png" >
                  {<>
                     <h1><b>Flowchart<br />Build<br />Executor</b></h1>
@@ -21,7 +21,7 @@ const Top = ()=>{
             </Section>
 
 
-        </>
+        </main>
     ) ;
 };
 

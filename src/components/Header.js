@@ -15,7 +15,7 @@ const Header = ()=>{
                     <li><a href="/conntact">問い合わせ</a></li>
                     <li><a href="/credit">クレジット</a></li>
                 </ul>
-
+                <div id="header-menu-btn">MENU</div>
             </header>
         </>
     );
