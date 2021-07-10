@@ -229,7 +229,9 @@ main section h3{
     box-shadow: 0 0 10px 0 rgba(0,0,0,1);
     transition: 0.1s;
 }
-
+h1.smaller{
+    font-size: 5vw;
+}
 
 
 /*レスポンシブ*/
@@ -271,7 +273,6 @@ main section h3{
     }
     header > ul:hover{
         transition:0.75s;
-
     }
     header > div > img{
         display:none;
@@ -291,6 +292,7 @@ main section h3{
         font-size: 10px;
         align-items: center;
         justify-content: center;
+        transition: 0.5s;
     }
     #header-menu-btn::after,
     #header-menu-btn::before{
@@ -332,7 +334,7 @@ main section h3{
     main section h3{
         text-align: center;
         text-align: left;
-        font-size: 13vw;
+        font-size: 10vw;
     }
 }
 
