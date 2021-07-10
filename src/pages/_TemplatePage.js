@@ -4,7 +4,7 @@ import background from "../img/background.png" ;
 
 const PageTemplate = ()=>{
     return (
-        <main>
+        <main class="template">
             <Section type="left" >
                 <h1>Sectionコンポーネントの使い方について</h1>
                 Sectionコンポーネントは基本的なページセクションのテンプレートを提供します。以下の属性を指定してください。
