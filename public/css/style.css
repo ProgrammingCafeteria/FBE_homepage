@@ -214,6 +214,7 @@ main section h3{
     -webkit-user-select: none;
     text-decoration: none;
     text-align: center;
+    border-radius: 10px;
 }
 .fbe-button:hover{
     background:#9d69a3;
@@ -292,10 +293,9 @@ main section h3{
     main section h2,
     main section h3{
         text-align: center;
+        text-align: left;
+        font-size: 13vw;
     }
-
-
-
 }
 
 

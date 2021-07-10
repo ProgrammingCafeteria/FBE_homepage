@@ -1,38 +1,29 @@
 import Section from "./Section" ;
 import "./css/_TemplatePage.css" ;
+import LinkButton from "./LinkButton" ;
 
 const PageTemplate = ()=>{
     return (
         <>
-            <Section
-                type="left"
-                title=
-                    "Sectionコンポーネントの使い方について"
-                description=""
-                imgPath="img/background.png">
-                    <>
-                        Sectionコンポーネントは基本的なページセクションのテンプレートを提供します。以下の属性を指定してください。
-                        <ul>
-                            <li>type</li>
-                            <li>title</li>
-                            <li>imgPath</li>
-                        </ul>
-                    </>
+            <Section 
+             type="left"
+             title="テンプレートページ"
+             text="このページを参考にページを作成してください"
+             afterText={<LinkButton text="TOPへ" href="./top" />}
 
+             imgPath="img/background.png"
+             >
             </Section>
 
-            <Section title="type" imgPath="img/background.png">
-                left,right,centerを指定する。デフォルトはleft。
-            </Section>
+            <Section 
+             type="right"
+             title="typeをrightにする"
+             text="title,text,afterTextが右に移動します"
+             afterText={<LinkButton text="今すぐダウンロードする" href="./download" />}
 
-            <Section title="title" imgPath="img/background.png">
-                タイトルを指定する。
+             imgPath="img/background.png"
+             >
             </Section>
-
-            <Section title="imgPath" imgPath="img/background.png">
-                index.htmlからの画像のパスを指定する。
-            </Section>
-            
         </>
     ) ;
 };
