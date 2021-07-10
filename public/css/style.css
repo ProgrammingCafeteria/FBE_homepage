@@ -114,6 +114,9 @@ header > ul > li:hover{
     color:aqua;
     transition: 0.35s;
 }
+#header-menu-btn{
+    display:none;
+}
 /*フッター*/
 footer{
     width:100%;
@@ -214,6 +217,7 @@ main section h3{
     -webkit-user-select: none;
     text-decoration: none;
     text-align: center;
+    border-radius: 10px;
 }
 .fbe-button:hover{
     background:#9d69a3;
@@ -272,6 +276,41 @@ main section h3{
     header > div > img{
         display:none;
     }
+    #header-menu-btn{
+        display:flex;
+        width: 7vh;
+        height: 7vh;
+        border:solid 1px rgb(112, 112, 112);
+        background:white;
+        position: fixed;
+        right:2px;
+        top:2px;
+        border-radius: 1vh;
+        text-align: center;
+        padding:auto;
+        font-size: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    #header-menu-btn::after,
+    #header-menu-btn::before{
+        content:"";
+        display:block;
+        width:5vh;
+        height:2px;
+        border-radius:2px;
+        background:black;
+        position:absolute;
+    }
+    #header-menu-btn::after{
+        top:1vh;
+        left:1vh;
+    }
+    #header-menu-btn::before{
+        bottom:1vh;
+        left:1vh;
+    }
+
     main section{
         flex-direction: column;
         justify-content: center;
@@ -292,10 +331,9 @@ main section h3{
     main section h2,
     main section h3{
         text-align: center;
+        text-align: left;
+        font-size: 13vw;
     }
-
-
-
 }
 
 
