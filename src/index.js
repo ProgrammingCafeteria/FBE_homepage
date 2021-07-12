@@ -12,6 +12,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 /* ページコンポーネント */
 import TopPage from "./pages/TopPage" ;
+import AboutPage from "./pages/AboutPage" ;
 import _TemplatePage from "./pages/_TemplatePage" ;
 import UnknownPage from "./pages/UnknownPage" ;
 import UncreatedPage from "./pages/UncreatedPage" ;
@@ -30,7 +31,7 @@ ReactDOM.render(
         <Route exact path="/" component={TopPage} />
         <Route exact path="/top" component={TopPage} />
         <Route exact path="/download" component={UncreatedPage} />
-        <Route exact path="/about" component={UncreatedPage} />
+        <Route exact path="/about" component={AboutPage} />
         <Route exact path="/doc" component={UncreatedPage} />
         <Route exact path="/conntact" component={UncreatedPage} />
         <Route exact path="/credit" component={UncreatedPage} />

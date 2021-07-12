@@ -176,6 +176,7 @@ main section:nth-child(2n+1){
 main section:nth-child(2n){
     background:#61707d;
     color:white;
+    border-color: white;
     box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
 }
 
@@ -190,6 +191,7 @@ main section.center .fbe-descriptions{
 
 /*画像*/
 main section img{
+    margin:0 1rem;
     width:40vw;
 }
 /*タイトル*/
@@ -229,6 +231,21 @@ main section h3{
     box-shadow: 0 0 10px 0 rgba(0,0,0,1);
     transition: 0.1s;
 }
+/* 画像ライン */
+main section div.imgLine{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    margin:1.5rem auto;
+}
+main section div.imgLine > img{
+    margin:0.5rem;
+    width: 90%;
+    height: auto;
+}
+
 h1.smaller{
     font-size: 5vw;
 }
@@ -279,8 +296,8 @@ h1.smaller{
     }
     #header-menu-btn{
         display:flex;
-        width: 7vh;
-        height: 7vh;
+        width: 5vh;
+        height: 5vh;
         border:solid 1px rgb(112, 112, 112);
         background:white;
         position: fixed;
@@ -298,7 +315,7 @@ h1.smaller{
     #header-menu-btn::before{
         content:"";
         display:block;
-        width:5vh;
+        width:3vh;
         height:2px;
         border-radius:2px;
         background:black;
@@ -317,6 +334,7 @@ h1.smaller{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 10vh auto;
     }
     main section:first-child{
         padding-top:3rem;
@@ -327,6 +345,7 @@ h1.smaller{
     }
     main section img{
         margin:2rem 0;
+        width:80vw;
     }
     /*タイトル*/
     main section h1,
