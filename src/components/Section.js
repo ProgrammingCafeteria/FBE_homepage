@@ -10,7 +10,7 @@ const Section = (props)=>{
     return (
         <section className={type} id={id}>
             <div>
-                <div className="fbe-description">
+                <div className="fbe-descriptions">
                     {props.children}
                 </div>
             </div>

@@ -9,9 +9,9 @@ const TutorialPage01 = (props)=>{
     return (
         <>
             <main className="tp01">
-                <Section type="center" id="sec_01">
+                <Section type="center" id="sec_01" imgPath={defaultImg}>
                     <h1>FBE<br />チュートリアル</h1>
-                    <b>「FlowchartBuildExecutor(FBE)</b>とは
+                    <b>「Flowchart Build Executor(FBE)</b>とは
                     フローチャートを作成して、実行ができるフリーソフトです。
                     このページでは初心者向けにチュートリアルを掲載しています。
                     FBEを初めて触る人はこちらを参考にFBEを学ぶことで
@@ -39,18 +39,16 @@ const TutorialPage01 = (props)=>{
                         下のボタンをクリックして、ダウンロードページへ移動します。
                         ダウンロードページに移動したらWindowsの欄を選んで、Zipファイルをダウンロードします。
                         <LinkButton href="/download" text="Windows版をダウンロード" newTab={true} />
-                        <ImgLine cap="ダウンロードページ(デザインが異なる場合があります)" src={defaultImg} />
 
                         <h2>解凍</h2>
                         ダウンロードしたZipファイルを
                         <a href="https://www.vector.co.jp/soft/win95/util/se169348.html">Lhaplus</a>
                         などの解凍ソフトで適当なフォルダ（ドキュメント・デスクトップなど）に解凍してください。
-                        <ImgLine cap="解凍する" src={defaultImg} />
 
                         <h2>起動</h2>
                         解凍したフォルダの中にある、<b>「FlowchartBuildExecutor.exe」</b>
                         をダブルクリックしてください。FBEが起動します。
-                        <ImgLine cap="ダブルクリックで起動する" src={defaultImg} />
+
 
                         <br />
                         これだけでインストールは完了です。
@@ -122,7 +120,6 @@ const TutorialPage01 = (props)=>{
 
                 </ul>
             </div>
-
 
         </>
     

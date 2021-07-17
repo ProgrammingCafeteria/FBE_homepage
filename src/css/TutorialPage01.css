@@ -31,8 +31,6 @@ div#menu::after{
 div#menu:hover{
     width: auto;
     height: auto;
-    right:0;
-    bottom: 0;
     font-size: 1rem;
     padding-bottom: 2rem;
 }
