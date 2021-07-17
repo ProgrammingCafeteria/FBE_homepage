@@ -10,13 +10,12 @@
     list-style-type: decimal;
 }
 
-.about summary{
+.about div.sum{
     margin:2rem 0;
     padding:1.2rem;
     border-radius: 1rem;
     border:solid 3px  ;
 }
-
 
 
 

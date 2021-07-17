@@ -25,6 +25,29 @@ img{
     width:auto;
     height:auto;
 }
+b{
+    font-size: 1.4em;
+}
+.color-01{
+    color: #f5fbef;
+}
+.color-02{
+    color: #61707d;
+}
+.color-03{
+    color: #9d69a3;
+}
+.bg-01{
+    color: #f5fbef;
+}
+.bg-02{
+    color: #61707d;
+}
+.bg-03{
+    color: #9d69a3;
+}
+
+
 .text-align-center{
     text-align: center;
 }
@@ -198,11 +221,19 @@ main section img{
 main section h1,
 main section h2,
 main section h3{
-    font-size:2.75em;
     text-align: left;
     align-items: center;
     margin:0;
     margin-bottom:0.75rem;
+}
+main section h1{
+    font-size:2.75em;
+}
+main section h2{
+    font-size:2.25em;
+}
+main section h3{
+    font-size:2.00em;
 }
 /*ボタン*/
 .fbe-button{
@@ -353,8 +384,18 @@ h1.smaller{
     main section h3{
         text-align: center;
         text-align: left;
-        font-size: 10vw;
+        /* font-size: 10vw; */
     }
+    main section h1{
+        font-size:10vw;
+    }
+    main section h2{
+        font-size:7.5vw;
+    }
+    main section h3{
+        font-size:5vw;
+    }
+
 }
 
 

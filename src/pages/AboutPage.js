@@ -1,4 +1,5 @@
 import Section from "../components/Section" ;
+import LinkButton from "../components/LinkButton" ;
 import ImgLine from "../components/ImgLine" ;
 import img_snap01 from "../img/スナップ01.PNG" ;
 import img_snap06 from "../img/スナップ06.PNG" ;
@@ -15,14 +16,14 @@ const About = ()=>{
             <Section type="center" >
                  {<>
                     <h1> FBEでできること </h1>
-                    <summary>
+                    <div className="sum">
                         <strong>〇FBEでできること</strong>
                         <ul>
                             <li>フローチャートを作成する</li>
                             <li>フローチャートを実行する</li>
                             <li>フローチャートをプログラミング言語のコードへ変換する</li>
                         </ul>
-                    </summary>
+                    </div>
                  </>}
             </Section>
 
@@ -58,7 +59,7 @@ const About = ()=>{
 
                 FBEがフローチャートを実行する上での特徴は以下の通りです。
 
-                <summary>
+                <div className="sum">
                     <strong>〇実行の特徴</strong>
                     <ul>
                         <li>実行タイプ</li>
@@ -66,14 +67,14 @@ const About = ()=>{
                         <li>変数の値のトレーサ機能</li>
                         <li>配列テンプレート</li>
                     </ul>
-                </summary>
+                </div>
 
-                <p>
+                <div>
                     <div><strong>〇実行タイプ</strong></div>
                     例えば売上データを読み取って合計を求めるプログラムと、2Dアクションゲームとでは
                     データの表示方法に大きな違いがあります。FBEではこれを<b>実行タイプ</b>と呼び、
                     様々なものが用意されています。例えば以下のようなものがあります。
-                    <summary>
+                    <div className="sum">
                         <strong>〇実行タイプの例</strong>
                         <ul>
                             <li>メッセージボックス（デフォルト）</li>
@@ -81,13 +82,13 @@ const About = ()=>{
                             <li>表形式</li>
                             <li>2Dゲーム</li>
                         </ul>
-                    </summary>
+                    </div>
 
                     <ImgLine src={img_snap03} cap="実行タイプを選択する"></ImgLine>
 
                     また実行タイプによっては、詳細オプションを設定できるものもあり、
                     よりクリエイティブなプログラム作成を支援しています。
-                </p>
+                </div>
 
             </>}
             </Section>
@@ -100,13 +101,27 @@ const About = ()=>{
 
                     <ImgLine src={img_f2p} cap="フローチャートをプログラミング言語へ"></ImgLine>
                     ※言語やフローチャートによっては変換できないこともあります。
-
-
                 </>}
             </Section>
 
+            <Section type="center" >
+                {<>
+                    <h1>FBEを使ってみよう</h1>
+                    ここまで読んだあなたはすでにFBEの役割を理解できています。
+                    物は試し。ぜひ実際にFBEを使ってみることで理解した機能を
+                    使ってみてください！
+                    <LinkButton href="/download" text="ダウンロードページへ"/>
+                </>}
+            </Section>
 
-
+            <Section type="center" >
+                {<>
+                    <h1>より詳しく知りたいですか？</h1>
+                    ここで紹介しなかった細かな機能や、初心者用チュートリアル、
+                    公式ドキュメントなどを参照したい場合は、下のボタンからドキュメントページをご覧ください。
+                    <LinkButton href="/doc" text="ドキュメントを参照する"/>
+                </>}
+            </Section>
 
 
         </main>
