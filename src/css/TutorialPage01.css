@@ -17,6 +17,29 @@ div#menu *{
     margin: 0;
     padding:0;
 }
+div#menu{
+    min-height: 5vw;
+    overflow: hidden;
+    font-size: 0;
+    margin: 0;
+    padding: 0.9rem;
+}
+div#menu::after{
+    content: "MENU";
+    font-size: 1rem;
+}
+div#menu:hover{
+    width: auto;
+    height: auto;
+    right:0;
+    bottom: 0;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}
+div#menu:hover::after{
+    content:"";
+}
+
 main.tp01 section ul{
     list-style-type:decimal;
 }
@@ -30,12 +53,9 @@ main.tp01 .top-bottom-margin{
     margin-bottom:2rem;
 }
 
+/*
 @media screen and (max-width: 800px) {
     div#menu{
-        /*
-        width:5vw;
-        height:5vw;
-        */
         min-height: 5vw;
         overflow: hidden;
         font-size: 0;
@@ -58,3 +78,5 @@ main.tp01 .top-bottom-margin{
         content:"";
     }
 }
+
+*/

@@ -10,7 +10,7 @@ const TutorialPage01 = (props)=>{
         <>
             <main className="tp01">
                 <Section type="center" id="sec_01">
-                    <h1>FBE チュートリアル</h1>
+                    <h1>FBE<br />チュートリアル</h1>
                     <b>「FlowchartBuildExecutor(FBE)</b>とは
                     フローチャートを作成して、実行ができるフリーソフトです。
                     このページでは初心者向けにチュートリアルを掲載しています。
@@ -90,12 +90,13 @@ const TutorialPage01 = (props)=>{
                     ..................
                     <h2 id="howto_tosrc">フローチャートをソースコードに変換する</h2>
                     ..................
+
                     <hr />
+
                     <h2>その他の操作</h2>
-                    <h2>プロジェクトの保存</h2>
+                    <h2 id="howto_saveProject">プロジェクトの保存</h2>
                     FBEでは編集内容を保存するときに<b>「FBE形式」</b>で保存します。
                     「FBE形式」の拡張子は".fbe"です。
-                    <h3>プロジェクトの保存</h3>
                     プロジェクトをFBE形式で保存するには、..................
                     
                 </Section>
@@ -116,6 +117,7 @@ const TutorialPage01 = (props)=>{
                     <li><a href="#howto_make">フローチャートの作成</a></li>
                     <li><a href="#howto_exe">フローチャートの実行</a></li>
                     <li><a href="#howto_tosrc">フローチャートをソースコードに変換する</a></li>
+                    <li><a href="#howto_saveProject">プロジェクトの保存</a></li>
 
 
                 </ul>
