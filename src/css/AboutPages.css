@@ -1,0 +1,23 @@
+
+
+.about ul,
+.about ul li{
+    padding: 0;
+    margin: 0;
+}
+.about ul{
+    padding-left: 1rem;
+    list-style-type: decimal;
+}
+
+.about div.sum{
+    margin:2rem 0;
+    padding:1.2rem;
+    border-radius: 1rem;
+    border:solid 3px  ;
+}
+
+
+
+
+
