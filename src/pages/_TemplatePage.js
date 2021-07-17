@@ -51,14 +51,14 @@ const PageTemplate = ()=>{
             <Section type="left">
                 <h1> ページの作成について </h1>
                 ページコンポーネントの構成は次のようにしてください。CSSなどが上手く反映されない可能性があります。
-                <p>
-                    <table>
+                {/*<table>
+                    <tbody>
                         <tr><td>ページコンポーネント</td>      <td>必須</td></tr>
                         <tr><td>+mainタグ</td>               <td>必須</td></tr>
                         <tr><td>++Sectionコンポーネント</td>  <td>複数可</td></tr>
                         <tr><td>+asideタグ</td>              <td>省略可</td></tr>
-                    </table>
-                </p>
+                    </tbody>
+                </table>*/}
 
             </Section>
 
