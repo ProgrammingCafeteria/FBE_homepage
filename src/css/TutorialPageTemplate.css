@@ -43,43 +43,32 @@ div#menu:hover::after{
     content:"";
 }
 
-main.tp01 section ul{
+main.tp section ul{
     list-style-type:decimal;
 }
 
-main.tp01 ul{
+main.tp ul{
     list-style-type: none;
 }
 
-main.tp01 .top-bottom-margin{
+main.tp .top-bottom-margin{
     margin-top:2rem;
     margin-bottom:2rem;
 }
 
-/*
-@media screen and (max-width: 800px) {
-    div#menu{
-        min-height: 5vw;
-        overflow: hidden;
-        font-size: 0;
-        margin: 0;
-        padding: 0.9rem;
-    }
-    div#menu::after{
-        content: "MENU";
-        font-size: 1rem;
-    }
-    div#menu:hover{
-        width: auto;
-        height: auto;
-        right:0;
-        bottom: 0;
-        font-size: 1rem;
-        padding-bottom: 2rem;
-    }
-    div#menu:hover::after{
-        content:"";
-    }
+div.tutorial_anchors{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    width:100%;
+}
+div.tutorial_anchors > div{
+    text-align: center;
+    text-decoration: none;
+}
+div.tutorial_anchors > div a{
+    text-decoration: none;
+    font-size:1.2rem;
 }
 
-*/
+
+

@@ -5,7 +5,7 @@ const Section = (props)=>{
     const type = props.type ? props.type : "left" ;
     let imgDiv = "" ;
     if(props.imgPath){
-        imgDiv = <div> <img src={props.imgPath} alt="errot" /></div> ;
+        imgDiv = <div className="sectionImg"> <img src={props.imgPath} alt="errot" /></div> ;
     }
     return (
         <section className={type} id={id}>

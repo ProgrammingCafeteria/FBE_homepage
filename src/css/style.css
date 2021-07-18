@@ -13,8 +13,9 @@
 html{
     margin:0;
     padding:0;
-    font-size:max(2.0vw,18px);
+    font-size:max(2.0vw,12px);
     color:black;
+    word-wrap: break-word;
 }
 body{
     font-family: 'M PLUS 1p', sans-serif;    margin:0;
@@ -26,7 +27,7 @@ img{
     height:auto;
 }
 b{
-    font-size: 1.4em;
+    font-size: 1.1em;
 }
 .color-01{
     color: #f5fbef;
@@ -161,7 +162,7 @@ main section{
     justify-content: space-between;
     align-items: center;
     margin: 20vh 0;
-    padding:1.5rem;
+    padding:3rem 1.5rem;
     text-align: left;
     position:relative;
 }
@@ -192,6 +193,12 @@ main section.center h3{
 }
 main section.center img{
     margin:3rem;
+}
+main section > *{
+    width:100%;
+}
+main section .sectionImg{
+    text-align: center;
 }
 
 main section:nth-child(2n+1){
@@ -287,6 +294,9 @@ h1.smaller{
 
 /*レスポンシブ*/
 @media screen and (max-width: 800px) {
+    html{
+        font-size: 16px;
+    }
     header{
         justify-content: center;
         z-index: 9999;
@@ -369,7 +379,7 @@ h1.smaller{
         justify-content: center;
         align-items: center;
         margin: 10vh auto;
-        padding:0.5rem;
+        padding:2rem 0.5rem;
     }
     main section:first-child{
         padding-top:3rem;
@@ -380,7 +390,7 @@ h1.smaller{
     }
     main section img{
         margin:2rem 0;
-        width:80vw;
+        width:calc(80vw - 4rem);
     }
     /*タイトル*/
     main section h1,
@@ -399,6 +409,12 @@ h1.smaller{
     main section h3{
         font-size:5vw;
     }
+/*     
+    main section.center .fbe-descriptions,
+    main section.left .fbe-descriptions,
+    main section.right .fbe-descriptions{
+        text-align: left;
+    } */
 
 }
 

@@ -11,7 +11,7 @@ const TutorialPage01 = (props)=>{
             <main className="tp01">
                 <Section type="center" id="sec_01" imgPath={defaultImg}>
                     <h1>FBE<br />チュートリアル</h1>
-                    <b>「Flowchart Build Executor(FBE)</b>とは
+                    <b>Flowchart Build Executor (FBE)</b>とは
                     フローチャートを作成して、実行ができるフリーソフトです。
                     このページでは初心者向けにチュートリアルを掲載しています。
                     FBEを初めて触る人はこちらを参考にFBEを学ぶことで
@@ -46,7 +46,7 @@ const TutorialPage01 = (props)=>{
                         などの解凍ソフトで適当なフォルダ（ドキュメント・デスクトップなど）に解凍してください。
 
                         <h2>起動</h2>
-                        解凍したフォルダの中にある、<b>「FlowchartBuildExecutor.exe」</b>
+                        解凍したフォルダの中にある、<b>FlowchartBuildExecutor.exe</b>
                         をダブルクリックしてください。FBEが起動します。
 
 
@@ -71,7 +71,7 @@ const TutorialPage01 = (props)=>{
 
                 </Section>
 
-                <Section type="left" id="sec_03">
+                {/* <Section type="left" id="sec_03">
                     <h1>基本的な操作方法</h1>
                     FBEでできることは主に以下の通りです。
                     <ul>
@@ -97,7 +97,7 @@ const TutorialPage01 = (props)=>{
                     「FBE形式」の拡張子は".fbe"です。
                     プロジェクトをFBE形式で保存するには、..................
                     
-                </Section>
+                </Section> */}
 
             </main>
 
@@ -111,11 +111,11 @@ const TutorialPage01 = (props)=>{
                     {/* <li><a href="#install_mac">　Mac OS</a></li> */}
                     <li><a href="#install_other">　その他のOS</a></li>
                     
-                    <li><a href="#sec_03">基本的な操作方法</a></li>
+                    {/* <li><a href="#sec_03">基本的な操作方法</a></li>
                     <li><a href="#howto_make">フローチャートの作成</a></li>
                     <li><a href="#howto_exe">フローチャートの実行</a></li>
                     <li><a href="#howto_tosrc">フローチャートをソースコードに変換する</a></li>
-                    <li><a href="#howto_saveProject">プロジェクトの保存</a></li>
+                    <li><a href="#howto_saveProject">プロジェクトの保存</a></li> */}
 
 
                 </ul>

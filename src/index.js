@@ -8,8 +8,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
 /* 共通コンポーネント */
+import "./css/style.css"
 import Header from './components/Header';
 import Footer from './components/Footer';
+import TutorialPageTemplate from "./components/TutorialPageTemplate" ;
 /* ページコンポーネント */
 import TopPage from "./pages/TopPage" ;
 import AboutPage from "./pages/AboutPage" ;
@@ -39,6 +41,7 @@ ReactDOM.render(
 
         <Route exact path="/tutorial" component={TutorialPage01} />
         <Route exact path="/tutorial_01" component={TutorialPage01} />
+        <Route exact path="/tutorial_temp" component={TutorialPageTemplate} />
 
         {/* 開発用 */}
 
