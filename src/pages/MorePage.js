@@ -9,8 +9,8 @@ const MorePage = (props)=>{
                 <h1>ドキュメント</h1>
                 このページでは以下の情報を提供します。
                 <ul>
-                    <li><a href="/tutorial">初心者向けチュートリアル</a></li>
-                    <li><a href="/tutorial">公式ドキュメント（兼説明書）</a></li>
+                    <li><a href="/tutorial/1">初心者向けチュートリアル</a></li>
+                    <li><a href="/tutorial/1">公式ドキュメント（兼説明書）</a></li>
                 </ul>
             </Section>
             

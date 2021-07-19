@@ -1,5 +1,5 @@
 
-git branch test_01
+git checkout test_01
 
 git add .
 git commit -m "auto commit"
