@@ -2,7 +2,8 @@
 
 const Section = (props)=>{
     const id = props.id? props.id : "" ;
-    const type = props.type ? props.type : "left" ;
+    let type = props.type ? props.type : "left" ;
+    console.log(type);
     const cn = props.className ? props.className : "" ;
     let imgDiv = "" ;
     if(props.imgPath){

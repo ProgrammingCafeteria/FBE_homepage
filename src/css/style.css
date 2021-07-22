@@ -47,7 +47,24 @@ b{
 .bg-03{
     color: #9d69a3;
 }
-
+.ta-center{
+    text-align: center !important;
+}
+.ta-left{
+    text-align: left !important;
+}
+.ta-right{
+    text-align: right !important;
+}
+.disp-ib{
+    display:inline-block;
+}
+.disp-i{
+    display:inline;
+}
+.disp-b{
+    display:block;
+}
 
 .text-align-center{
     text-align: center;
@@ -110,6 +127,7 @@ header{
     z-index: 9999;
 }
 header img{
+    margin-right: 10px;
     width:2.0rem;
     border-radius: 0.5rem;
 }
@@ -217,6 +235,9 @@ main section .fbe-descriptions{
     text-align:left;
 
 }
+main section .fbe-descriptions li{
+    text-align: left;
+}
 main section.center .fbe-descriptions{
     text-align: center;
 }
@@ -231,7 +252,7 @@ main section img{
 main section h1,
 main section h2,
 main section h3{
-    text-align: left;
+    text-align: center;
     align-items: center;
     margin:0;
     margin-bottom:0.75rem;
@@ -415,6 +436,16 @@ h1.smaller{
     main section.right .fbe-descriptions{
         text-align: left;
     } */
+
+    .ta-center{
+        text-align: left;
+    }
+    .ta-left{
+        text-align: left;
+    }
+    .ta-right{
+        text-align: left;
+    }
 
 }
 
