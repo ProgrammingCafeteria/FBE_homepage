@@ -1,8 +1,10 @@
 
+
+
 div#menu{
     position:fixed;
-    right:10px;
-    bottom:10px;
+    right: 0px;
+    bottom: 0px;
     min-height:20vh;
     padding:0.7rem;
     background:white;
@@ -31,27 +33,62 @@ div#menu::after{
 div#menu:hover{
     width: auto;
     height: auto;
-    right:0;
-    bottom: 0;
+    max-width: 100vw;
+    max-height: 70vh;
+    overflow: auto;
     font-size: 1rem;
-    padding-bottom: 2rem;
+    padding: 0.7rem;
+    z-index:10000;
+    padding-bottom: 10vh;
 }
 div#menu:hover::after{
     content:"";
 }
 
-main.tp01 section ul{
+main.to section ul{
     list-style-type:decimal;
 }
 
-main.tp01 ul{
+main.to ul{
     list-style-type: none;
 }
 
-main.tp01 .top-bottom-margin{
+main.to .top-bottom-margin{
     margin-top:2rem;
     margin-bottom:2rem;
 }
+
+main.tp section{
+    margin:0;
+    box-shadow: none;
+}
+main.tp section:last-child{
+    margin:0;
+    margin-bottom:10vh;
+    padding-top:1vh;
+    padding-bottom:1vh;
+}
+main.tp .top-move-bt-sec{
+    padding-top:0;
+    padding-bottom:0;
+}
+main.tp .tp-move-bt-bar{
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    padding-top:0.3rem;
+    padding-bottom:0.3rem;
+}
+main.tp .tp-move-bt-bar div.tp-move-bt{
+    display:inline-block;
+    width:auto;
+}
+main.tp .tp-move-bt-bar .fbe-button{
+    margin:0;
+}
+
 
 /*
 @media screen and (max-width: 800px) {

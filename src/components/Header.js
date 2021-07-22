@@ -1,10 +1,11 @@
+import iconImg from "../img/icon.png" ;
 
 const Header = ()=>{
     return (
         <>
             <header>
                 <div>
-                    <img src="img/icon.png" alt="icon" ></img>
+                    <img src={iconImg} alt="icon" ></img>
                     <div><b>F</b> lowchart <b>B</b>uild <b>E</b>xecutor</div>
                 </div>
                 <ul>

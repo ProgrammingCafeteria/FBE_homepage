@@ -1,78 +1,32 @@
-
-import Section from "../components/Section" ;
-import { useState } from "react";
-
-
-const OnOffLb = (props)=>{
-    return (<label>Now:{props.value?"On":"Off"}</label>) ;
-};
-const ChangeBtn = (props)=>{
-    let [value,setValue] = [props.value,props.setValue];
-    let click = (eve)=>{
-        setValue(prevState=>!prevState);
+import React,{useState,useEffect} from "react" ;
+import Section from "../components/Section";
 
 
-    };
-    return (
-        <div>
-            <button onClick={click}>Toggle</button>
-        </div>
-    ) ;
-};
-const OnBtn = (props)=>{
-    let setValue = props.setValue;
-    let click = (eve)=>{
-        setValue(true);
-    };
-    return (
-        <div>
-            <button onClick={click}>ToOn</button>
-        </div>
-    ) ;
-};
-const OffBtn = (props)=>{
-    let setValue = props.setValue;
-    let click = (eve)=>{
-        setValue(prevState=>false);
-    };
-    return (
-        <div>
-            <button onClick={click}>ToOff</button>
-        </div>
-    ) ;
-};
-const List = (props)=>{
-    let lis = props.values.map((v,i,a)=><li>{v}</li>);
-    return (
-        <div>
-            mapで変化前
-            <ul>{props.values}</ul>
-            mapで変化後
-            <ul> {lis} </ul>
-        </div>
-    ) ;
-};
+const Prac01 = (props)=>{
+    const [page,setPage] = useState(1);
+    const [before,setBefore] = useState(page-1);
+    const beforeUrl = `/prac${("00"+before).slice(-2)}` ;
+    useEffect(()=>{
+        console.log("init");
+        console.log(beforeUrl);
+        console.log();
+    },[]);
+    
+    useEffect(()=>{
+        console.log("render");
+    });
 
-
-const PageTemplate = ()=>{
-    let [value,setValue] = useState(true);
-    const listValues = [10,30,50,20,40,0] ;
     return (
         <main>
-            <Section type="left">
-                <h1>useStateの練習</h1>
-                <OnOffLb value={value} />
-                <ChangeBtn value={value} setValue={setValue}/>
-                <OnBtn setValue={setValue}></OnBtn>
-                <OffBtn setValue={setValue}></OffBtn>
-            </Section>
-            <Section type="left">
-                <h1>Listの練習</h1>
-                <List values={listValues} />
+            <Section type="center">
+                <h1>{page}</h1>
             </Section>
         </main>
-
     ) ;
 };
 
-export default PageTemplate ;
+export default Prac01 ;
+
+
+
+

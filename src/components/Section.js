@@ -2,15 +2,17 @@
 
 const Section = (props)=>{
     const id = props.id? props.id : "" ;
-    const type = props.type ? props.type : "left" ;
+    let type = props.type ? props.type : "left" ;
+    console.log(type);
+    const cn = props.className ? props.className : "" ;
     let imgDiv = "" ;
     if(props.imgPath){
-        imgDiv = <div> <img src={props.imgPath} alt="errot" /></div> ;
+        imgDiv = <div className="sectionImg"> <img src={props.imgPath} alt="errot" /></div> ;
     }
     return (
-        <section className={type} id={id}>
+        <section className={type} id={id} className={cn}>
             <div>
-                <div className="fbe-description">
+                <div className="fbe-descriptions">
                     {props.children}
                 </div>
             </div>
