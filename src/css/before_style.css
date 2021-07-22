@@ -1,0 +1,452 @@
+/*
+色
+メイン背景
+ #f5fbef
+サブ背景
+ #61707d
+アクセント
+ #9d69a3
+
+*/
+
+/*全体,汎用*/
+html{
+    margin:0;
+    padding:0;
+    font-size:min(max(2.0vw,12px),20px);
+    color:black;
+    word-wrap: break-word;
+}
+body{
+    font-family: 'M PLUS 1p', sans-serif;    margin:0;
+    padding:0;
+    background:#f5fbef;
+}
+img{
+    width:auto;
+    height:auto;
+}
+b{
+    font-size: 1.1em;
+}
+.color-01{
+    color: #f5fbef;
+}
+.color-02{
+    color: #61707d;
+}
+.color-03{
+    color: #9d69a3;
+}
+.bg-01{
+    color: #f5fbef;
+}
+.bg-02{
+    color: #61707d;
+}
+.bg-03{
+    color: #9d69a3;
+}
+.ta-center{
+    text-align: center !important;
+}
+.ta-left{
+    text-align: left !important;
+}
+.ta-right{
+    text-align: right !important;
+}
+.disp-ib{
+    display:inline-block;
+}
+.disp-i{
+    display:inline;
+}
+.disp-b{
+    display:block;
+}
+
+.text-align-center{
+    text-align: center;
+}
+.text-align-left{
+    text-align: center;
+}
+.text-align-left{
+    text-align: center;
+}
+/*ペイン*/
+.pane{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    opacity:1;
+    z-index:10000;
+    background:black;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:3rem;
+    animation: paneAni 0.7s ease 0.5s 1 alternate forwards running;
+}
+@keyframes paneAni {
+    0% {
+        opacity:1;
+        z-index:10000;
+    }
+    99.99% {
+        z-index:10000;
+    }
+    100% {
+        opacity:0;
+        z-index: -1;
+    }
+}  
+/*ヘッダー*/
+header,header *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align:baseline;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    min-height:2.0em;
+    padding:0.1rem 1rem;
+    background: white;
+    font-size:max(min(0.9em,1.3rem),0.80em);
+    position: fixed;
+    width:calc(100% - 1rem * 2) ;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    top:0;
+    z-index: 9999;
+}
+header img{
+    margin-right: 10px;
+    width:2.0rem;
+    border-radius: 0.5rem;
+}
+header b{
+    color:#9d69a3;
+}
+header > div{
+    display:flex;
+    vertical-align: middle;
+}
+header > ul{
+    list-style: none;
+    display: flex;
+    margin:0;
+    padding:0;
+    vertical-align: middle;
+}
+header > ul > li{
+    margin-left: 1rem;
+}
+header > ul > li > a{
+    color:black;
+    text-decoration: none;
+    font-size:0.9em;
+}
+header > ul > li > a:hover,
+header > ul > li:hover{
+    color:aqua;
+    transition: 0.35s;
+}
+#header-menu-btn{
+    display:none;
+}
+/*フッター*/
+footer{
+    width:100%;
+    background:#61707d;
+    color:white;
+    text-align:center;
+    padding-bottom: 10vh;
+    padding-top:1rem;
+}
+/*メイン*/
+/*セクション*/
+main section{
+    display: block;
+    width:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20vh 0;
+    padding:3rem 1.5rem;
+    text-align: left;
+    position:relative;
+}
+main section:first-child{
+    /*marginかpaddingか*/
+    margin-top: 0.0rem;
+    padding-top: 2.9rem;
+}
+main section.left,
+main section.right{
+    justify-content: space-between;
+}
+main section.left{
+    flex-direction: row;
+}
+main section.right{
+    flex-direction: row-reverse;
+}
+main section.center{
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+main section.center h1,
+main section.center h2,
+main section.center h3{
+    text-align:center;
+}
+main section.center img{
+    margin:3rem;
+}
+main section > *{
+    width:100%;
+}
+main section .sectionImg{
+    text-align: center;
+}
+
+main section:nth-child(2n+1){
+    background:rgb(255, 255, 255);
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
+}
+main section:nth-child(2n){
+    background:#61707d;
+    color:white;
+    border-color: white;
+    border-width: 0;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
+}
+
+main section .fbe-descriptions{
+    text-align:left;
+
+}
+main section .fbe-descriptions li{
+    text-align: left;
+}
+main section.center .fbe-descriptions{
+    text-align: center;
+}
+
+
+/*画像*/
+main section img{
+    margin:0 1rem;
+    width:40vw;
+}
+/*タイトル*/
+main section h1,
+main section h2,
+main section h3{
+    text-align: center;
+    align-items: center;
+    margin:0;
+    margin-bottom:0.75rem;
+}
+main section h1{
+    font-size:2.75em;
+}
+main section h2{
+    font-size:2.25em;
+}
+main section h3{
+    font-size:2.00em;
+}
+/*ボタン*/
+.fbe-button{
+    margin: 1rem auto;
+    width: 70%;
+    background:white;
+    border: solid 3px #9d69a3;
+    color:#9d69a3;
+    display: inline-block;
+    padding:0.1rem 1rem ;
+    transition: 0.2s;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+}
+.fbe-button:hover{
+    background:#9d69a3;
+    border: solid 3px #9d69a3;
+    color:white;
+    transition: 0.2s;
+}
+.fbe-button:active{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,1);
+    transition: 0.1s;
+}
+/* 画像ライン */
+main section div.imgLine{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+    margin:1.5rem auto;
+}
+main section div.imgLine > img{
+    margin:0.5rem;
+    width: 90%;
+    height: auto;
+}
+
+h1.smaller{
+    font-size: 5vw;
+}
+
+
+/*レスポンシブ*/
+@media screen and (max-width: 800px) {
+    html{
+        font-size: 16px;
+    }
+    header{
+        justify-content: center;
+        z-index: 9999;
+    }
+    header > ul{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:0vh;
+        overflow: hidden;
+        background:white;
+        padding:3.5rem 0;
+        font-size:1.5rem;
+
+        padding:0;
+        flex-direction: column;
+        transition: 0.75s;
+        transition-timing-function: ease;
+        opacity: 0;
+    }
+    header > ul > li{
+        width:80%;
+        margin:0.5rem 0;
+    }
+    header:hover > ul{
+        height:40vh;
+        padding:3rem 0;
+        transition: 0.2s;
+        transition-timing-function: ease;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        opacity:0.99;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    }
+    header > ul:hover{
+        transition:0.75s;
+    }
+    header > div > img{
+        display:none;
+    }
+    #header-menu-btn{
+        display:flex;
+        width: 5vh;
+        height: 5vh;
+        border:solid 1px rgb(112, 112, 112);
+        background:white;
+        position: fixed;
+        right:2px;
+        top:2px;
+        border-radius: 1vh;
+        text-align: center;
+        padding:auto;
+        font-size: 10px;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+    }
+    #header-menu-btn::after,
+    #header-menu-btn::before{
+        content:"";
+        display:block;
+        width:3vh;
+        height:2px;
+        border-radius:2px;
+        background:black;
+        position:absolute;
+    }
+    #header-menu-btn::after{
+        top:1vh;
+        left:1vh;
+    }
+    #header-menu-btn::before{
+        bottom:1vh;
+        left:1vh;
+    }
+
+    main section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10vh auto;
+        padding:2rem 0.5rem;
+    }
+    main section:first-child{
+        padding-top:3rem;
+    }
+    main section.left,
+    main section.right{
+        flex-direction: column;
+    }
+    main section img{
+        margin:2rem 0;
+        width:calc(80vw - 4rem);
+    }
+    /*タイトル*/
+    main section h1,
+    main section h2,
+    main section h3{
+        text-align: center;
+        text-align: left;
+        /* font-size: 10vw; */
+    }
+    main section h1{
+        font-size:10vw;
+    }
+    main section h2{
+        font-size:7.5vw;
+    }
+    main section h3{
+        font-size:5vw;
+    }
+/*     
+    main section.center .fbe-descriptions,
+    main section.left .fbe-descriptions,
+    main section.right .fbe-descriptions{
+        text-align: left;
+    } */
+
+    .ta-center{
+        text-align: left;
+    }
+    .ta-left{
+        text-align: left;
+    }
+    .ta-right{
+        text-align: left;
+    }
+
+}
+
+
