@@ -23,14 +23,17 @@ const Section = (props)=>{
     useEffect(()=>{
         const scrollAni = (eve)=>{
             const $sec = document.querySelector(`section.sec_${secId}`);
-            if(window.innerHeight > $sec.getBoundingClientRect().top){
-                console.log("anime");
-                // $sec.classList.push("show");
+            if(window.innerHeight >= $sec.getBoundingClientRect().top){
                 $sec.classList.add("show");
             }
         } ;
-        window.addEventListener("load",scrollAni);
-        window.addEventListener("scroll",scrollAni);
+        if(secId === 0){
+            scrollAni();
+        }else{
+            window.addEventListener("load",scrollAni);
+            window.addEventListener("scroll",scrollAni);
+        }
+
     },[]);
 
     return (
