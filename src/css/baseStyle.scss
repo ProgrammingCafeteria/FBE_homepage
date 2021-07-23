@@ -1,12 +1,5 @@
 
-//変数・関数
-$color-01 : #f5fbef ;
-$color-02 : #61707d ;
-$color-03 : #9d69a3 ;
-$transition-time: 0.3s ;
-$font-size: min(max(2.0vw,16px),20px);
-$responsive-bound: 750px;
-
+@import "_var_funcs.scss" ;
 
 /*全体,汎用*/
 *{
@@ -59,13 +52,22 @@ header{
     background: white;
     position:fixed;
     left: 0;
-    top: 0;
+    top: -100px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     width:100%;
     opacity: 0.99;
     word-wrap: break-word;
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+
+    //アニメーション
+    transition: all $transition-time*0.5 ease;
+    transition-delay: $transition-time*2;
+    
+    &.show{
+        top:0;
+    }
+
 
     b{
         color:$color-03;
@@ -81,6 +83,8 @@ header{
     ul{
         list-style: none;
         display: flex;
+        flex-direction: row;
+        margin: 10px 0;
         li{
             margin-left:0.3rem;
             a{
@@ -100,9 +104,20 @@ header{
 }
 
 
+
 /* main */
 main{
+    z-index: 0;
     section{
+        opacity: 0.0;
+        transition: all $transition-time*1.5 ease;
+        transform: translate(0,20vh);
+        z-index: 0;
+        &.show{
+            opacity: 1.0;
+            transform: none;
+        }
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -112,7 +127,7 @@ main{
         box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
 
         &:first-child{
-            margin-top: 5vmin * 1;
+            padding-top: 15vmin !important;
         }
         &:nth-child(2n+1){
             background-color: white;
@@ -143,9 +158,12 @@ main{
         &.top-move-bt-sec{
             padding:0;
         }
+        & > div.sectionImg > img{
+            width:auto;
+            max-height:70vh;
+        }
     }
 }
-
 /* footer */
 footer{
     text-align: center;
@@ -184,9 +202,10 @@ hr{
 
 ul{
     list-style: none;
-    display: none;
+    display: flex;
+    width:auto;
+    text-align: left;
     flex-direction: column;
-    align-items: center;
 }
 
 
@@ -209,11 +228,14 @@ ul{
         }
         ul{
             display: flex;
+            flex-direction: column;
+            align-items: center;
             width: 100vw;
             height: 0;
             position: fixed;
             left: 0;
             top: 0;
+            margin-top: 0;
             transition:$transition-time;
             overflow: hidden;
         }
@@ -225,10 +247,10 @@ ul{
                 display: none;
             }
             ul{
+                width:100vw;
+                flex-direction: column;
                 height: 60vh;
                 padding:1rem 0 3rem 0;
-                flex-direction: column;
-                align-items: center;
                 font-size: 1.5rem;
                 background: white;
                 box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
@@ -236,11 +258,13 @@ ul{
                 li{
                     margin:0;
                     margin-bottom: 0.75rem;
+                    transition:$transition-time /5;
                 }
             }
         }
     }
     main{
+        z-index: 0;
         section{
             padding:inherit 10px;
             h1{
