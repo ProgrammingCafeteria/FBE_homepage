@@ -1,6 +1,14 @@
 import iconImg from "../img/icon.png" ;
 
+
 const Header = ()=>{
+
+    window.addEventListener("load" , ()=>{
+        document.querySelector("header")
+            .classList.add("show");
+        document.querySelector("#header-menu-btn")
+            .classList.add("show");
+    });
     return (
         <>
             <header>

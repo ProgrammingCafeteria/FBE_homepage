@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
 /* 共通コンポーネント */
-import "./css/style.css"
+import "./css/baseStyle.css"
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -24,6 +24,8 @@ import Prac01 from "./pages/_Prac01" ;
 
 
 /* 設定 */
+
+
 
 
 /* 描画 */
