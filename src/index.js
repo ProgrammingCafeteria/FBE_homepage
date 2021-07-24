@@ -16,7 +16,8 @@ import Footer from './components/Footer';
 import TopPage from "./pages/TopPage" ;
 import AboutPage from "./pages/AboutPage" ;
 import MorePage from "./pages/MorePage" ;
-import TutorialPage01 from "./pages/TutorialPage" ;
+import TutorialPage01 from "./pages/TutorialPage01" ;
+import TutorialPage02 from "./pages/TutorialPage02" ;
 import UnknownPage from "./pages/UnknownPage" ;
 import UncreatedPage from "./pages/UncreatedPage" ;
 import Prac01 from "./pages/_Prac01" ;
@@ -44,7 +45,9 @@ ReactDOM.render(
         <Route exact path="/conntact" component={UncreatedPage} />
         <Route exact path="/credit" component={UncreatedPage} />
 
-        <Route path="/tutorial/:tid" component={TutorialPage01} />
+        <Route path="/tutorial/:tid" component={TutorialPage02} />
+        <Route path="/flowchart_tutorial/:tid" component={TutorialPage01} />
+        <Route path="/fbe_tutorial/:tid" component={TutorialPage02} />
 
         {/* 開発用 */}
         <Route exact path="/prac01" component={Prac01} />

@@ -5,9 +5,8 @@ import Section from '../components/Section';
 import LinkButton from '../components/LinkButton';
 import ImgLine from '../components/ImgLine';
 //CSS
-import "../css/TutorialPage01.css" ;
+import "../css/TutorialPage02.css" ;
 //画像
-import defaultImg from "../img/background.png" ;
 import snap07Img from "../img/スナップ07.PNG" ;
 import snap08Img from "../img/スナップ08.PNG" ;
 import snap09Img from "../img/スナップ09.PNG" ;
@@ -299,7 +298,7 @@ const pageList = [
 export const pages = pageList ;
 
 
-const TutorialPage01 = (props)=>{
+const TutorialPage02 = (props)=>{
     console.log(props);
     const [pages,setPages] = useState(pageList);
 
@@ -340,7 +339,7 @@ const TutorialPage01 = (props)=>{
 
     return (
         <>
-            <main className="tp">
+            <main className="tp tutorials">
                 <Section type="center" id="tutorial_top">
                     <h1 className="ta-center">FBE<br />チュートリアル</h1>
                 </Section>
@@ -423,5 +422,5 @@ const TutorialPage01 = (props)=>{
     ) ;
 };
 
-export default TutorialPage01 ;
+export default TutorialPage02 ;
 

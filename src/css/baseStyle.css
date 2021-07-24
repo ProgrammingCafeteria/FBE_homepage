@@ -21,7 +21,7 @@ body {
 img {
   width: 100%;
   height: auto;
-  max-width: min(100%, 90vw);
+  max-width: min(min(100%, 90vw), 700px);
 }
 
 b {
@@ -108,7 +108,7 @@ header ul li {
   border-bottom: solid 1px #dadada;
 }
 header ul li a {
-  color: black;
+  color: white;
   text-decoration: none;
   -webkit-transition: 0.15s;
   transition: 0.15s;
@@ -170,7 +170,6 @@ main section > div {
   width: 100%;
 }
 main section img {
-  max-width: 90vw;
   margin: 1rem 0;
 }
 main section h1 {
@@ -188,6 +187,36 @@ main section.top-move-bt-sec {
 main section > div.sectionImg > img {
   width: auto;
   max-height: 70vh;
+}
+main.tutorials section {
+  text-align: left;
+}
+main.tutorials section h1, main.tutorials section h2, main.tutorials section h3, main.tutorials section h4, main.tutorials section h5, main.tutorials section h6, main.tutorials section .imgLine {
+  text-align: center;
+}
+main.tutorials section:nth-child(n+2) h1 {
+  border-bottom: solid #dadada 0.5px;
+  border-left: solid #9d69a3 10px;
+}
+main.tutorials section a.fbe-button {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 0.5rem 0.7rem;
+}
+main.tutorials section .memo {
+  background: #ffffb7;
+  width: 90%;
+  margin: 1rem 0;
+  padding: 0 10px 1rem 10px;
+}
+main.tutorials section .memo h1 {
+  width: 70%;
+  border: none;
+  border-bottom: solid 3px #fffff8;
+  text-align: left;
+  margin: 0;
+  padding: 0.3em 0 0 0.3em;
+  font-size: 1em;
 }
 
 /* footer */
@@ -259,6 +288,7 @@ ul {
             justify-content: center;
     padding: 0.3rem 0;
     font-size: 0.8rem;
+    height: auto;
   }
   header img {
     display: none;
@@ -289,7 +319,9 @@ ul {
             transform: scale(0, 0);
   }
   header #header-menu-btn {
-    font-size: 20%;
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
     opacity: 0;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -304,8 +336,6 @@ ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 7vw;
-    height: 7vw;
     position: fixed;
     right: 5px;
     top: 5px;
@@ -315,13 +345,6 @@ ul {
   }
   header #header-menu-btn.show {
     opacity: 1;
-  }
-  header:hover {
-    height: 0;
-    overflow: hidden;
-  }
-  header:hover div {
-    display: none;
   }
   header:hover ul {
     width: 100vw;
@@ -335,16 +358,23 @@ ul {
     background: white;
     -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
             box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-    -webkit-transition: 0.1s;
-    transition: 0.1s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
   header:hover ul li {
+    color: black;
     margin: 0;
     margin-bottom: 0.75rem;
     -webkit-transition: 0.06s;
     transition: 0.06s;
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
+  }
+  header:hover ul li a {
+    color: black;
+  }
+  header:hover ul li a:hover {
+    color: cyan;
   }
 
   main {

@@ -1,0 +1,46 @@
+
+main.tp01{
+    .top-bottom-margin{
+        margin-top:2rem;
+        margin-bottom:2rem;
+    }
+    section {
+        margin:0;
+        box-shadow: none;
+        &:last-child{
+            margin-bottom: 20vh;
+        }
+    }
+    .top-move-bt-sec{
+        padding-top:0;
+        padding-bottom:0;
+    }
+    .tp-move-bt-bar{
+        display:inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        padding-top:0.3rem;
+        padding-bottom:0.3rem;
+        div.tp-move-bt{
+            display:inline-block;
+            width:auto;
+        }
+        .fbe-button{
+            margin:0;
+        }
+
+    }
+    section.noneAnimeSection{
+        transition-property: none;
+        transition-delay: 0s ;
+    }
+    ul{
+        margin-left:3rem;
+        list-style:outside;
+    }
+}
+
+
+

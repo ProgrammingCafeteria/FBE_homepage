@@ -11,13 +11,13 @@ const MorePage = (props)=>{
                     このページでは以下の情報を提供します。
                     <br />
                     <ul className="ta-center disp-ib">
-                        <li><a href="/tutorial/1">初心者向けチュートリアル</a></li>
-                        {/* <li><a href="/tutorial/1">公式ドキュメント（兼説明書）</a></li> */}
+                        <li><a href="/flowchart_tutorial/1">フローチャート 入門</a></li>
+                        <li><a href="/fbe_tutorial/1">FBE チュートリアル</a></li>
                     </ul>
                 </div>
             </Section>
-            
-            {props.children && React.cloneElement(this.props.children, { someExtraProp: "TEST" })}
+
+            {/* {props.children && React.cloneElement(this.props.children, { someExtraProp: "TEST" })} */}
 
         </main>
     ) ;
