@@ -11,8 +11,6 @@ import { flowchart_tutorial_imgs as imgs , sym_imgs as symImgs } from "../utils/
 import imgVar01 from "../img/変数01.png" ;
 
 
-
-
 //マテリアルアイコン
 // import { makeStyles } from '@material-ui/core/styles';
 // import Accordion from '@material-ui/core/Accordion';
@@ -261,6 +259,8 @@ const Calc = () => {
             ここで注意したいのが、掛け算割り算余り算は普段見る
             "×","÷"ではなく、"*","/"を使うことです。 
             また、"( )"（かっこ）を使った計算もできます。
+            それぞれの計算結果は以下の通りになります。
+            <ImgLine cap="計算結果" src={imgs[12]} />
 
             <div className="memo">
                 <h1>計算について</h1>
@@ -278,6 +278,50 @@ const Calc = () => {
     );
 };
 
+const Branch = (props)=>{
+    return (
+        <Section>
+            <h1>分岐</h1>
+            プログラミングをしていくうえで、
+            「こういう条件の時には〇〇をしたいけど、そうじゃない時は××したい」
+            ということが良くあります。これを処理の分岐と言い、
+            フローチャートでは<b>分岐記号</b>を使って表します。
+            <ImgLine cap="分岐記号" src={symImgs["branch"]} />
+            条件には
+            "&lt;"(より小さい), "&gt;"(より大きい), "&lt;="(以下), "&gt;"(以上), 
+            "="(と同じ), "!="(と違う) 等が使えます。
+            <div className="memo">
+                <h1>!= (違う)</h1>
+                問題や資料によっては"≠"を使うこともあります。
+                FBEでは!=を使います。
+            </div>
+            実際のプログラムに使ってみるとこのようになります。
+            <ImgLine cap="分岐を使ったプログラム" src={imgs[13]} />
+            このプログラムでは、
+            <ul>
+                <li>年齢を入力して</li>
+                <li>年齢が20以上なら(条件がYesなら)</li>
+                <li>おとなと出力して</li>
+                <li>そうでないなら(条件がNoなら)</li>
+                <li>こどもと出力する</li>
+            </ul>
+            という動きをします。
+            例えば年齢に15が入っていた場合こどもと表示されます。
+            この時おとなとは表示されません。
+            <ImgLine cap="" src={imgs[14]} />
+
+        </Section>
+
+    );
+};
+
+const Loop = ()=>{
+    return (
+        <Section>
+            <h1>繰り返し</h1>
+        </Section>
+    );
+};
 
 
 
@@ -317,6 +361,17 @@ const pageList = [
         "jsx":
             <Calc />
     },
+    {
+        "tid": "7",
+        "jsx":
+            <Branch />
+    },
+    {
+        "tid": "8",
+        "jsx":
+            <Loop />
+    },
+    
 ];
 export const pages = pageList;
 

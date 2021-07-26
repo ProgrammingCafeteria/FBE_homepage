@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-
 /* 共通コンポーネント */
 import "./css/baseStyle.css"
 import Header from './components/Header';
@@ -28,7 +27,7 @@ import Prac01 from "./pages/_Prac01" ;
 
 
 
-
+console.log("requested !");
 /* 描画 */
 ReactDOM.render(
   <>
@@ -62,7 +61,6 @@ ReactDOM.render(
   </>,
   document.getElementById("root")
 );
-
 
 
 
