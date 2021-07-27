@@ -1,23 +1,25 @@
-main.tp01 .top-bottom-margin {
+main.tutorialTemplate .top-bottom-margin {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-main.tp01 section {
+main.tutorialTemplate section {
+  text-align: left;
   margin: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-main.tp01 section:last-child {
+main.tutorialTemplate section:last-child {
   margin-bottom: 20vh;
 }
-main.tp01 section .blue {
+main.tutorialTemplate section .blue {
   color: blue;
 }
-main.tp01 .top-move-bt-sec {
+main.tutorialTemplate .top-move-bt-sec {
   padding-top: 0;
   padding-bottom: 0;
 }
-main.tp01 .tp-move-bt-bar {
+main.tutorialTemplate .tp-move-bt-bar {
+  text-align: center;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -35,31 +37,34 @@ main.tp01 .tp-move-bt-bar {
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
 }
-main.tp01 .tp-move-bt-bar div.tp-move-bt {
+main.tutorialTemplate .tp-move-bt-bar div.tp-move-bt {
   display: inline-block;
   width: auto;
 }
-main.tp01 .tp-move-bt-bar .fbe-button {
+main.tutorialTemplate .tp-move-bt-bar .fbe-button {
   margin: 0;
 }
-main.tp01 section.noneAnimeSection {
+main.tutorialTemplate section.noneAnimeSection {
   -webkit-transition-property: none;
   transition-property: none;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
-main.tp01 ul {
+main.tutorialTemplate ul {
   margin-left: 3rem;
   list-style: outside;
 }
-main.tp01 table {
+main.tutorialTemplate table {
   margin: 1rem 0;
   border-spacing: 0;
   border: solid 1px black;
 }
-main.tp01 table td {
+main.tutorialTemplate table td {
   padding: 0.25rem 0.5rem;
   border: solid 1px black;
+}
+main.tutorialTemplate h1, main.tutorialTemplate h2, main.tutorialTemplate h3 {
+  text-align: center;
 }
 
 ul.tutorial-menu {
@@ -77,6 +82,8 @@ ul.tutorial-menu {
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   padding: 1rem;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 ul.tutorial-menu h1 {
   content: "LIST";
@@ -97,5 +104,17 @@ ul.tutorial-menu > h1, ul.tutorial-menu > div {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  text-align: center;
 }
-/*# sourceMappingURL=TutorialPage01.css.map */
+ul.tutorial-menu > h1:active, ul.tutorial-menu > div:active {
+  -webkit-transform: scale(0.9, 0.9);
+          transform: scale(0.9, 0.9);
+}
+ul.tutorial-menu > h1:hover, ul.tutorial-menu > div:hover {
+  opacity: 0.8;
+}
+ul.tutorial-menu > div {
+  border: solid #9d69a3 1px;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=TutorialTemplate.css.map */

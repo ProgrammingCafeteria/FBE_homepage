@@ -49,6 +49,7 @@ header{
     display:flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     position:fixed;
     left: 0;
     top: -100px;
@@ -86,9 +87,10 @@ header{
         display: flex;
         flex-direction: row;
         margin: 10px 0;
+        margin-right: 5px;
         li{
-            margin-left:0.3rem;
-            border-bottom:solid 1px $color-gray;
+            vertical-align:middle;
+            white-space: nowrap;
             a{
                 color:white;
                 text-decoration: none;
@@ -98,11 +100,19 @@ header{
                     transition: $transition-time ;
                 }
             }
+            &::after{
+                font-size: 0.7rem;
+                content: " | " ;
+            }
+            &:last-child::after{
+                content: "" ;
+            }
         }
     }
     #header-menu-btn{
         display:none;
         color:black;
+        user-select:none;
     }
 }
 
@@ -111,7 +121,15 @@ header{
 /* main */
 main{
     z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
     section{
+        box-sizing: border-box;
+        width:100%;
         opacity: 0.0;
         transition: all $transition-time*1.5 ease;
         transform: translate(0,20vh);
@@ -143,6 +161,7 @@ main{
         }
         & > div{
             width: 100%;
+            max-width: 1000px;
         }
 
         img{
@@ -168,6 +187,7 @@ main{
         }
     }
 
+    
     //チュートリアル
     $color-memo-01: rgb(255, 255, 183);
     $color-memo-02: rgb(255, 255, 248);
@@ -177,6 +197,7 @@ main{
             & h1,& h2,& h3,& h4,& h5,& h6,
             & .imgLine{
                 text-align: center;
+                margin: 2rem 0;
             }
             &:nth-child(n+2) h1{
                 border-bottom: solid $color-gray 0.5px;
@@ -285,7 +306,11 @@ ul{
             transition:$transition-time;
             overflow: hidden;
             li{
+                border-bottom:solid 1px $color-gray;
                 transform: scale(0,0);
+                &::after{
+                    content: "";
+                }
             }
         }
 
@@ -341,7 +366,8 @@ ul{
     main{
         z-index: 0;
         section{
-            padding:inherit 10px;
+            padding-left: 10px;
+            padding-right: 10px;
             h1{
                 font-size: 10vw;
                 margin:2rem 0;

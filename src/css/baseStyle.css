@@ -63,6 +63,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: fixed;
   left: 0;
   top: -100px;
@@ -102,10 +104,11 @@ header ul {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 10px 0;
+  margin-right: 5px;
 }
 header ul li {
-  margin-left: 0.3rem;
-  border-bottom: solid 1px #dadada;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 header ul li a {
   color: white;
@@ -118,16 +121,43 @@ header ul li a:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+header ul li::after {
+  font-size: 0.7rem;
+  content: " | ";
+}
+header ul li:last-child::after {
+  content: "";
+}
 header #header-menu-btn {
   display: none;
   color: black;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 /* main */
 main {
   z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main section {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
   opacity: 0;
   -webkit-transition: all 0.45s ease;
   transition: all 0.45s ease;
@@ -168,6 +198,7 @@ main section:nth-child(2n) {
 }
 main section > div {
   width: 100%;
+  max-width: 1000px;
 }
 main section img {
   margin: 1rem 0;
@@ -193,6 +224,7 @@ main.tutorials section {
 }
 main.tutorials section h1, main.tutorials section h2, main.tutorials section h3, main.tutorials section h4, main.tutorials section h5, main.tutorials section h6, main.tutorials section .imgLine {
   text-align: center;
+  margin: 2rem 0;
 }
 main.tutorials section:nth-child(n+2) h1 {
   border-bottom: solid #dadada 0.5px;
@@ -315,8 +347,12 @@ ul {
     overflow: hidden;
   }
   header ul li {
+    border-bottom: solid 1px #dadada;
     -webkit-transform: scale(0, 0);
             transform: scale(0, 0);
+  }
+  header ul li::after {
+    content: "";
   }
   header #header-menu-btn {
     width: 48px;
@@ -381,7 +417,8 @@ ul {
     z-index: 0;
   }
   main section {
-    padding: inherit 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   main section h1 {
     font-size: 10vw;

@@ -4,6 +4,7 @@ import React,{useState} from "react" ;
 import Section from '../components/Section';
 import LinkButton from '../components/LinkButton';
 import ImgLine from '../components/ImgLine';
+import TutorialTemplate from "../components/TutorialTemplate" ;
 //CSS
 import "../css/TutorialPage02.css" ;
 //画像
@@ -280,16 +281,22 @@ const T_basic_tech_2 = ()=>{
 
 
 const pageList = [
-    {"tid":"1" ,
+    {
+        "pageId":"1" ,
+        "title":"FBEのインストール",
         "jsx":
             <T_getStart />
         },
-    {"tid":"2" ,
-        "jsx":
+    {
+        "pageId":"2" ,
+    "title":"基本的な操作方法",
+    "jsx":
             <T_basic_tech_1 />
 
         },
-    {"tid":"3" ,
+    {
+        "pageId":"3" ,
+        "title":"プロジェクトの保存",
         "jsx":
             <T_basic_tech_2 />
 
@@ -297,130 +304,13 @@ const pageList = [
 ];
 export const pages = pageList ;
 
-
 const TutorialPage02 = (props)=>{
-    console.log(props);
-    const [pages,setPages] = useState(pageList);
-
-    console.log(props);
-    let pageIdx = -1 ;
-    pages.forEach((ele,idx)=>{
-        if(ele["tid"] === props.match.params.tid){
-            pageIdx = idx ;
-        }
-    });
-    let [nowPageIdx,setNowPageIdx] = useState(pageIdx) ;
-    console.log("nowPageIdx :"+nowPageIdx);
-    if(nowPageIdx < 0){
-        //ページが存在しない時
-        pages[nowPageIdx] = {
-            "jsx":
-                <Section type="center">
-                    <h1>ERROR !</h1>
-                    <h1>Not Found In Tutorials !</h1>
-                    このページは存在しません。URLを確かめてください。
-                    <LinkButton href="/tutorial/test1" text="チュートリアルの始めへ" />
-                    <LinkButton href="/top" text="TOPへ" />
-                </Section>
-            }; 
-    }
-
-
-    // const useStyles = makeStyles((theme) => ({
-    //     root: {
-    //       width: '100%',
-    //     },
-    //     heading: {
-    //       fontSize: theme.typography.pxToRem(15),
-    //       fontWeight: theme.typography.fontWeightRegular,
-    //     },
-    //   }));
-    // const classes = useStyles();
-
     return (
-        <>
-            <main className="tp tutorials">
-                <Section type="center" id="tutorial_top">
-                    <h1 className="ta-center">FBE<br />チュートリアル</h1>
-                </Section>
-
-                <Section type="center" className="top-move-bt-sec">
-                    <div className="tp-move-bt-bar">
-                        {0 < nowPageIdx ?<LinkButton href={`/tutorial/${pages[nowPageIdx-1]["tid"]}`} text="前のページへ"></LinkButton>:<div></div>}
-                        {nowPageIdx < pages.length-1 ?<LinkButton href={`/tutorial/${pages[nowPageIdx+1]["tid"]}`} text="次のページへ"></LinkButton>:<div></div>}
-                    </div>
-                </Section>
-
-                {pages[nowPageIdx]["jsx"]}
-
-                <Section type="center" className="top-move-bt-sec">
-                    <div className="tp-move-bt-bar">
-                        {console.log(pages)}
-                        {0 < nowPageIdx ?<LinkButton href={`/tutorial/${pages[nowPageIdx-1]["tid"]}`} text="前のページへ"></LinkButton>:<div></div>}
-                        {nowPageIdx < pages.length-1 ?<LinkButton href={`/tutorial/${pages[nowPageIdx+1]["tid"]}`} text="次のページへ"></LinkButton>:<div></div>}
-                    </div>
-                </Section>
-
-                
-            </main>
-
-
-
-            {/* 
-
-                <Section type="left" id="sec_03">
-                    <h1>基本的な操作方法</h1>
-                    FBEでできることは主に以下の通りです。
-                    <ul>
-                        <li>フローチャートの作成</li>
-                        <li>フローチャートの実行</li>
-                        <li>フローチャートをソースコードに変換する</li>
-                    </ul>
-                    <h2 id="howto_make">フローチャートの作成</h2>
-                    今回は下のようなフローチャートの作成を通して、
-                    FBEでのフローチャート作成をマスターしましょう。
-                    <ImgLine cap="ダウンロードページ(デザインが異なる場合があります)" src={defaultImg} />
-
-                    <h2 id="howto_exe">フローチャートの実行</h2>
-                    ..................
-                    <h2 id="howto_tosrc">フローチャートをソースコードに変換する</h2>
-                    ..................
-
-                    <hr />
-
-                    <h2>その他の操作</h2>
-                    <h2 id="howto_saveProject">プロジェクトの保存</h2>
-                    FBEでは編集内容を保存するときに<b>「FBE形式」</b>で保存します。
-                    「FBE形式」の拡張子は".fbe"です。
-                    プロジェクトをFBE形式で保存するには、..................
-                    
-                </Section>
-
-            </main>
-
-            <div id="menu">
-                <ul>
-                    <h3>チュートリアル</h3>
-                    <li><a href="#sec_01">トップ</a></li>
-                    
-                    <li><a href="#sec_02">FBEのインストール</a></li>
-                    <li><a href="#install_win">　Windows</a></li>
-                    <li><a href="#install_other">　その他のOS</a></li>
-                    
-                    <li><a href="#sec_03">基本的な操作方法</a></li>
-                    <li><a href="#howto_make">フローチャートの作成</a></li>
-                    <li><a href="#howto_exe">フローチャートの実行</a></li>
-                    <li><a href="#howto_tosrc">フローチャートをソースコードに変換する</a></li>
-                    <li><a href="#howto_saveProject">プロジェクトの保存</a></li>
-
-
-                </ul>
-            </div> */}
-
-        </>
-    
-    ) ;
+        <TutorialTemplate className="tp02" match={props.match} title={<>FBE<br />チュートリアル</>} pageList={pageList} url="/fbe_tutorial/"/>
+    );
 };
+
+
 
 export default TutorialPage02 ;
 
