@@ -1,37 +1,37 @@
 //React
-import React,{useState} from "react" ;
+import React, { useState } from "react";
 //コンポーネント
 import Section from '../components/Section';
 import LinkButton from '../components/LinkButton';
 import ImgLine from '../components/ImgLine';
-import TutorialTemplate from "../components/TutorialTemplate" ;
+import TutorialTemplate from "../components/TutorialTemplate";
 //CSS
-import "../css/TutorialPage02.css" ;
+import "../css/TutorialPage02.css";
 //画像
-import snap07Img from "../img/スナップ07.PNG" ;
-import snap08Img from "../img/スナップ08.PNG" ;
-import snap09Img from "../img/スナップ09.PNG" ;
-import snap10Img from "../img/スナップ10.PNG" ;
-import snap11Img from "../img/スナップ11.PNG" ;
-import snap12Img from "../img/スナップ12.PNG" ;
-import snap14Img from "../img/スナップ14.PNG" ;
-import snap15Img from "../img/スナップ15.PNG" ;
-import snap16Img from "../img/スナップ16.PNG" ;
-import snap18Img from "../img/スナップ18.PNG" ;
-import snap19Img from "../img/スナップ19.PNG" ;
-import snap20Img from "../img/スナップ20.PNG" ;
-import snap21Img from "../img/スナップ21.PNG" ;
-import snap22Img from "../img/スナップ22.PNG" ;
-import snap23Img from "../img/スナップ23.PNG" ;
-import snap24Img from "../img/スナップ24.PNG" ;
-import snap25Img from "../img/スナップ25.PNG" ;
-import snap26Img from "../img/スナップ26.PNG" ;
-import snap27Img from "../img/スナップ27.PNG" ;
-import snap28Img from "../img/スナップ28.PNG" ;
-import snap29Img from "../img/スナップ29.PNG" ;
-import snap30Img from "../img/スナップ30.PNG" ;
-import snap31Img from "../img/スナップ31.PNG" ;
-import snap32Img from "../img/スナップ32.PNG" ;
+import snap07Img from "../img/スナップ07.PNG";
+import snap08Img from "../img/スナップ08.PNG";
+import snap09Img from "../img/スナップ09.PNG";
+import snap10Img from "../img/スナップ10.PNG";
+import snap11Img from "../img/スナップ11.PNG";
+import snap12Img from "../img/スナップ12.PNG";
+import snap14Img from "../img/スナップ14.PNG";
+import snap15Img from "../img/スナップ15.PNG";
+import snap16Img from "../img/スナップ16.PNG";
+import snap18Img from "../img/スナップ18.PNG";
+import snap19Img from "../img/スナップ19.PNG";
+import snap20Img from "../img/スナップ20.PNG";
+import snap21Img from "../img/スナップ21.PNG";
+import snap22Img from "../img/スナップ22.PNG";
+import snap23Img from "../img/スナップ23.PNG";
+import snap24Img from "../img/スナップ24.PNG";
+import snap25Img from "../img/スナップ25.PNG";
+import snap26Img from "../img/スナップ26.PNG";
+import snap27Img from "../img/スナップ27.PNG";
+import snap28Img from "../img/スナップ28.PNG";
+import snap29Img from "../img/スナップ29.PNG";
+import snap30Img from "../img/スナップ30.PNG";
+import snap31Img from "../img/スナップ31.PNG";
+import snap32Img from "../img/スナップ32.PNG";
 
 //マテリアルアイコン
 // import { makeStyles } from '@material-ui/core/styles';
@@ -43,7 +43,7 @@ import snap32Img from "../img/スナップ32.PNG" ;
 // import Button from '@material-ui/core/Button';
 
 
-const T_getStart = ()=>{
+const T_getStart = () => {
     return (
         <Section type="left">
             <h1>FBEのインストール</h1>
@@ -94,12 +94,12 @@ const T_getStart = ()=>{
                 などをインストールして、FBEのインストールにチャレンジしてみてもいいかもしれません。
             </div>
 
-            
+
         </Section>
-    ) ;
+    );
 };
 
-const T_basic_tech_1 = ()=>{
+const T_basic_tech_1 = () => {
     return (
         <Section type="left">
             <h1>基本的な操作方法</h1>
@@ -194,7 +194,7 @@ const T_basic_tech_1 = ()=>{
             次にソースコードの出力先フォルダを選びます。
             コード変換では複数のファイルが作成されるため、
             それらを出力する<b>フォルダ（ファイルではありません！）を
-            選択</b>してください。
+                選択</b>してください。
             今回は"work内のJavaScriptコード変換フォルダ"を選択してみます。
             <ImgLine cap="出力先フォルダを選択する" src={snap21Img} />
             次にフローチャートの実行と同じように、<b>実行タイプを指定</b>します。
@@ -223,10 +223,10 @@ const T_basic_tech_1 = ()=>{
 
 
         </Section>
-    ) ;
+    );
 };
 
-const T_basic_tech_2 = ()=>{
+const T_basic_tech_2 = () => {
     return (
         <Section type="center">
             <h1 id="howto_saveProject">プロジェクトの保存と読み込み</h1>
@@ -282,35 +282,35 @@ const T_basic_tech_2 = ()=>{
 
 const pageList = [
     {
-        "pageId":"1" ,
-        "title":"FBEのインストール",
+        "pageId": "1",
+        "title": "FBEのインストール",
         "jsx":
             <T_getStart />
-        },
+    },
     {
-        "pageId":"2" ,
-    "title":"基本的な操作方法",
-    "jsx":
+        "pageId": "2",
+        "title": "基本的な操作方法",
+        "jsx":
             <T_basic_tech_1 />
 
-        },
+    },
     {
-        "pageId":"3" ,
-        "title":"プロジェクトの保存",
+        "pageId": "3",
+        "title": "プロジェクトの保存",
         "jsx":
             <T_basic_tech_2 />
 
-        },
+    },
 ];
-export const pages = pageList ;
+export const pages = pageList;
 
-const TutorialPage02 = (props)=>{
+const TutorialPage02 = (props) => {
     return (
-        <TutorialTemplate className="tp02" match={props.match} title={<>FBE<br />チュートリアル</>} pageList={pageList} url="/fbe_tutorial/"/>
+        <TutorialTemplate className="tp02" match={props.match} title={<>FBE<br />チュートリアル</>} pageList={pageList} url="/fbe_tutorial/" />
     );
 };
 
 
 
-export default TutorialPage02 ;
+export default TutorialPage02;
 
