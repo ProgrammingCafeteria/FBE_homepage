@@ -191,10 +191,26 @@ main section:first-child {
 main section:nth-child(2n+1) {
   background-color: white;
   color: black;
+  border-color: black;
+}
+main section:nth-child(2n+1) table {
+  width: 100%;
+  max-width: 1000px;
+}
+main section:nth-child(2n+1) table td {
+  border-color: black;
 }
 main section:nth-child(2n) {
   background-color: #61707d;
   color: white;
+  border-color: white;
+}
+main section:nth-child(2n) table {
+  width: 100%;
+  max-width: 1000px;
+}
+main section:nth-child(2n) table td {
+  border-color: white;
 }
 main section > div {
   width: 100%;

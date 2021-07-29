@@ -154,10 +154,26 @@ main{
         &:nth-child(2n+1){
             background-color: white;
             color:black;
+            border-color: black;
+            table{
+                width:100%;
+                max-width:1000px;
+                td{
+                    border-color: black;
+                }
+            }
         }
         &:nth-child(2n){
             background-color: $color-02;
             color:white;
+            border-color: white;
+            table{
+                width:100%;
+                max-width:1000px;
+                td{
+                    border-color: white;
+                }
+            }
         }
         & > div{
             width: 100%;

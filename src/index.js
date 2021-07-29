@@ -17,6 +17,7 @@ import AboutPage from "./pages/AboutPage" ;
 import MorePage from "./pages/MorePage" ;
 import TutorialPage01 from "./pages/TutorialPage01" ;
 import TutorialPage02 from "./pages/TutorialPage02" ;
+import TutorialPage03 from "./pages/TutorialPage03" ;
 import UnknownPage from "./pages/UnknownPage" ;
 import UncreatedPage from "./pages/UncreatedPage" ;
 import Prac01 from "./pages/_Prac01" ;
@@ -24,17 +25,6 @@ import TutorialTemplate from "./components/TutorialTemplate" ;
 
 
 /* 設定 */
-const Test = (props)=>{
-  const list = [
-    {"pageId":"1","title":"TEST 1","jsx":<h1>TEST 1</h1>},
-    {"pageId":"2","title":"TEST 2","jsx":<h1>TEST 2</h1>},
-    {"pageId":"3","title":"TEST 3","jsx":<h1>TEST 3</h1>}
-  ] ;
-  return (
-    <TutorialTemplate className="test" match={props.match} title="テスト用" pageList={list} url="/test/"/>
-  ) ;
-};
-
 
 /* 描画 */
 ReactDOM.render(
@@ -55,10 +45,10 @@ ReactDOM.render(
         <Route path="/tutorial/:pageId" component={TutorialPage02} />
         <Route path="/flowchart_tutorial/:pageId" component={TutorialPage01} />
         <Route path="/fbe_tutorial/:pageId" component={TutorialPage02} />
+        <Route path="/fbe_ref/:pageId" component={TutorialPage03} />
 
         {/* 開発用 */}
         <Route exact path="/prac01" component={Prac01} />
-        <Route exact path="/test/:pageId" component={Test} />
 
 
         {/* 汎用 */}
