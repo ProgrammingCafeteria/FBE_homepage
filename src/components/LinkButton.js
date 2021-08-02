@@ -17,7 +17,7 @@ const LinkButton = (props)=>{
         }
     } ;
     return (
-        <div className="text-align-center">
+        <div className="ta-center">
             <a className="fbe-button" href={href} target={newTab} onClick={handleClick}>
                 {text}
             </a>

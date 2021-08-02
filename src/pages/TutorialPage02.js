@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Section from '../components/Section';
 import LinkButton from '../components/LinkButton';
 import ImgLine from '../components/ImgLine';
+import NewLine from '../components/NewLine';
 import TutorialTemplate from "../components/TutorialTemplate";
 //CSS
 import "../css/TutorialPage02.css";
@@ -89,9 +90,34 @@ const T_getStart = () => {
                 今現在、FBEは上記で紹介したOS以外ではサポートしていません。
                 ですが、FBEはJavaで作成されているため、JDKおよびJavaFxが
                 動作する環境では利用ができることがあります。
-                もしあなたのPCでFBEが利用不可あれば
+                もしあなたのPCでFBEが利用不可あれば、次の項を参考にして
                 <a href="https://bell-sw.com/">LibericaJDK</a>
                 などをインストールして、FBEのインストールにチャレンジしてみてもいいかもしれません。
+                <h3>LibericaJDKのインストール</h3>
+                この項で紹介する方法ではLibericaJDKがサポートしている
+                OSであればどのOSでもFBEのインストールが可能です。
+                <a href="https://bell-sw.com/">ここ</a>にアクセスして、
+                LibericaJDKをダウンロードします。バージョンは特に気にしなくてもいいと思いますが、
+                最新バージョンをダウンロードするのが無難でしょう。
+                ダウンロードしたファイルを各OSに従ってインストールします。
+                （よくわからない場合は 「LibericaJDK 〇〇(OS) インストール」などを ）
+                <h3>FBEをダウンロードする</h3>
+                次のリンクからダウンロードページへジャンプします。
+                <LinkButton href="/download" target="_blank" text="ダウンロードページへ"/>
+                移動後、希望バージョン（最新版を推奨）をダウンロードしてください。
+                <h3>FBEを実行する</h3>
+                ダウンロードしたFBEのZIPカードを解凍し適当なフォルダにおき、
+                ターミナル（シェル）を開きます。
+                その後、以下のコマンドを実行します。
+                <NewLine />
+                <div> cd ダウンロードしたフォルダ </div>
+                <div> java -jar FlowchartBuildExecutor </div>
+                <NewLine />
+                これで実行することが出来るはずです。
+                また、実行するたびにコマンドを実行するのは
+                面倒だと思うので、batファイルやcommandファイルなどの
+                シェルスクリプトファイルに書いておくと楽でしょう。
+
             </div>
 
 
