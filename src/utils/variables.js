@@ -80,7 +80,6 @@ const downloadDetails = {
 
 
 
-
 const imgs = [];
 imgs.push(null);
 imgs.push(img01);
