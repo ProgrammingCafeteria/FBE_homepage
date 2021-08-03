@@ -1,25 +1,56 @@
-import React,{useState,useEffect} from "react" ;
+import React,{useState,useEffect,createContext,useContext} from "react" ;
 import Section from "../components/Section";
 
+const Contexts = React.createContext({
+    "cnt": [0, ()=>{}],
+}) ;
+
+const CompA = ()=>{
+    return <h1>
+        count:
+        <Contexts.Consumer>
+            {
+                (context)=>context["cnt"][0]
+            }
+        </Contexts.Consumer>
+    </h1>;
+};
+const CompB = ()=>{
+    const cnt = useContext(Contexts);
+    const inc = (eve)=>{
+        cnt["cnt"][1](prev => prev+1 );
+    };
+    const dec = (eve)=>{
+        cnt["cnt"][1](prev => prev-1 );
+    };
+    const cle = (eve)=>{
+        cnt["cnt"][1](0 );
+    };
+    return (
+        <div>
+            <button onClick={inc}>UP</button>
+            <button onClick={dec}>DOWN</button>
+            <button onClick={cle}>CLEAR</button>
+        </div>);
+};
 
 const Prac01 = (props)=>{
-    const [page,setPage] = useState(1);
-    const [before,setBefore] = useState(page-1);
-    const beforeUrl = `/prac${("00"+before).slice(-2)}` ;
+    const [cnt,setCnt] = useState(0) ;
     useEffect(()=>{
-        console.log("init");
-        console.log(beforeUrl);
-        console.log();
+        const timer = setInterval(()=>{
+            setCnt(prev => Math.round((prev+0.1)*10)/10);
+        },100);
+        return ()=>{
+            clearInterval(timer);
+        };
     },[]);
-    
-    useEffect(()=>{
-        console.log("render");
-    });
-
     return (
         <main>
             <Section type="center">
-                <h1>{page}</h1>
+                <Contexts.Provider value={{"cnt":[cnt,setCnt]}}>
+                    <CompA />
+                    <CompB />
+                </Contexts.Provider>
             </Section>
         </main>
     ) ;

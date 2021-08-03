@@ -1,4 +1,7 @@
 import {useState} from "react" ;
+import { Link } from "react-router-dom";
+
+
 const LinkButton = (props)=>{
     const [href,setHref]= useState(props.href ? props.href : "/") ;
 
@@ -11,15 +14,14 @@ const LinkButton = (props)=>{
             setTimeout(()=>{
                 document.querySelector("html").scrollTop -= 50 ;
             },10);
-    
         }
     } ;
     return (
-        <div className="text-align-center">
+        <div className="ta-center">
             <a className="fbe-button" href={href} target={newTab} onClick={handleClick}>
                 {text}
             </a>
-            {/* <Link className="fbe-button" to={href}  target={newTab}>{text}</Link> */}
+            {/* <Link className="fbe-button" to={href} >{text}</Link> */}
         </div>
     );
 };

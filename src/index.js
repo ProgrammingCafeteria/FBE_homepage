@@ -3,12 +3,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
+import "./css/baseStyle.css"
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-
 /* 共通コンポーネント */
-import "./css/baseStyle.css"
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -16,17 +15,16 @@ import Footer from './components/Footer';
 import TopPage from "./pages/TopPage" ;
 import AboutPage from "./pages/AboutPage" ;
 import MorePage from "./pages/MorePage" ;
-import TutorialPage01 from "./pages/TutorialPage" ;
+import TutorialPage01 from "./pages/TutorialPage01" ;
+import TutorialPage02 from "./pages/TutorialPage02" ;
+import TutorialPage03 from "./pages/TutorialPage03" ;
 import UnknownPage from "./pages/UnknownPage" ;
 import UncreatedPage from "./pages/UncreatedPage" ;
 import Prac01 from "./pages/_Prac01" ;
-
+import TutorialTemplate from "./components/TutorialTemplate" ;
 
 
 /* 設定 */
-
-
-
 
 /* 描画 */
 ReactDOM.render(
@@ -44,7 +42,10 @@ ReactDOM.render(
         <Route exact path="/conntact" component={UncreatedPage} />
         <Route exact path="/credit" component={UncreatedPage} />
 
-        <Route path="/tutorial/:tid" component={TutorialPage01} />
+        <Route path="/tutorial/:pageId" component={TutorialPage02} />
+        <Route path="/flowchart_tutorial/:pageId" component={TutorialPage01} />
+        <Route path="/fbe_tutorial/:pageId" component={TutorialPage02} />
+        <Route path="/fbe_ref/:pageId" component={TutorialPage03} />
 
         {/* 開発用 */}
         <Route exact path="/prac01" component={Prac01} />
@@ -59,7 +60,6 @@ ReactDOM.render(
   </>,
   document.getElementById("root")
 );
-
 
 
 

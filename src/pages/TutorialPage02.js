@@ -1,37 +1,38 @@
 //React
-import React,{useState} from "react" ;
+import React, { useState } from "react";
 //コンポーネント
 import Section from '../components/Section';
 import LinkButton from '../components/LinkButton';
 import ImgLine from '../components/ImgLine';
+import NewLine from '../components/NewLine';
+import TutorialTemplate from "../components/TutorialTemplate";
 //CSS
-import "../css/TutorialPage01.css" ;
+import "../css/TutorialPage02.css";
 //画像
-import defaultImg from "../img/background.png" ;
-import snap07Img from "../img/スナップ07.PNG" ;
-import snap08Img from "../img/スナップ08.PNG" ;
-import snap09Img from "../img/スナップ09.PNG" ;
-import snap10Img from "../img/スナップ10.PNG" ;
-import snap11Img from "../img/スナップ11.PNG" ;
-import snap12Img from "../img/スナップ12.PNG" ;
-import snap14Img from "../img/スナップ14.PNG" ;
-import snap15Img from "../img/スナップ15.PNG" ;
-import snap16Img from "../img/スナップ16.PNG" ;
-import snap18Img from "../img/スナップ18.PNG" ;
-import snap19Img from "../img/スナップ19.PNG" ;
-import snap20Img from "../img/スナップ20.PNG" ;
-import snap21Img from "../img/スナップ21.PNG" ;
-import snap22Img from "../img/スナップ22.PNG" ;
-import snap23Img from "../img/スナップ23.PNG" ;
-import snap24Img from "../img/スナップ24.PNG" ;
-import snap25Img from "../img/スナップ25.PNG" ;
-import snap26Img from "../img/スナップ26.PNG" ;
-import snap27Img from "../img/スナップ27.PNG" ;
-import snap28Img from "../img/スナップ28.PNG" ;
-import snap29Img from "../img/スナップ29.PNG" ;
-import snap30Img from "../img/スナップ30.PNG" ;
-import snap31Img from "../img/スナップ31.PNG" ;
-import snap32Img from "../img/スナップ32.PNG" ;
+import snap07Img from "../img/スナップ07.PNG";
+import snap08Img from "../img/スナップ08.PNG";
+import snap09Img from "../img/スナップ09.PNG";
+import snap10Img from "../img/スナップ10.PNG";
+import snap11Img from "../img/スナップ11.PNG";
+import snap12Img from "../img/スナップ12.PNG";
+import snap14Img from "../img/スナップ14.PNG";
+import snap15Img from "../img/スナップ15.PNG";
+import snap16Img from "../img/スナップ16.PNG";
+import snap18Img from "../img/スナップ18.PNG";
+import snap19Img from "../img/スナップ19.PNG";
+import snap20Img from "../img/スナップ20.PNG";
+import snap21Img from "../img/スナップ21.PNG";
+import snap22Img from "../img/スナップ22.PNG";
+import snap23Img from "../img/スナップ23.PNG";
+import snap24Img from "../img/スナップ24.PNG";
+import snap25Img from "../img/スナップ25.PNG";
+import snap26Img from "../img/スナップ26.PNG";
+import snap27Img from "../img/スナップ27.PNG";
+import snap28Img from "../img/スナップ28.PNG";
+import snap29Img from "../img/スナップ29.PNG";
+import snap30Img from "../img/スナップ30.PNG";
+import snap31Img from "../img/スナップ31.PNG";
+import snap32Img from "../img/スナップ32.PNG";
 
 //マテリアルアイコン
 // import { makeStyles } from '@material-ui/core/styles';
@@ -43,7 +44,7 @@ import snap32Img from "../img/スナップ32.PNG" ;
 // import Button from '@material-ui/core/Button';
 
 
-const T_getStart = ()=>{
+const T_getStart = () => {
     return (
         <Section type="left">
             <h1>FBEのインストール</h1>
@@ -89,17 +90,42 @@ const T_getStart = ()=>{
                 今現在、FBEは上記で紹介したOS以外ではサポートしていません。
                 ですが、FBEはJavaで作成されているため、JDKおよびJavaFxが
                 動作する環境では利用ができることがあります。
-                もしあなたのPCでFBEが利用不可あれば
+                もしあなたのPCでFBEが利用不可あれば、次の項を参考にして
                 <a href="https://bell-sw.com/">LibericaJDK</a>
                 などをインストールして、FBEのインストールにチャレンジしてみてもいいかもしれません。
+                <h3>LibericaJDKのインストール</h3>
+                この項で紹介する方法ではLibericaJDKがサポートしている
+                OSであればどのOSでもFBEのインストールが可能です。
+                <a href="https://bell-sw.com/">ここ</a>にアクセスして、
+                LibericaJDKをダウンロードします。バージョンは特に気にしなくてもいいと思いますが、
+                最新バージョンをダウンロードするのが無難でしょう。
+                ダウンロードしたファイルを各OSに従ってインストールします。
+                （よくわからない場合は 「LibericaJDK 〇〇(OS) インストール」などを ）
+                <h3>FBEをダウンロードする</h3>
+                次のリンクからダウンロードページへジャンプします。
+                <LinkButton href="/download" target="_blank" text="ダウンロードページへ"/>
+                移動後、希望バージョン（最新版を推奨）をダウンロードしてください。
+                <h3>FBEを実行する</h3>
+                ダウンロードしたFBEのZIPカードを解凍し適当なフォルダにおき、
+                ターミナル（シェル）を開きます。
+                その後、以下のコマンドを実行します。
+                <NewLine />
+                <div> cd ダウンロードしたフォルダ </div>
+                <div> java -jar FlowchartBuildExecutor </div>
+                <NewLine />
+                これで実行することが出来るはずです。
+                また、実行するたびにコマンドを実行するのは
+                面倒だと思うので、batファイルやcommandファイルなどの
+                シェルスクリプトファイルに書いておくと楽でしょう。
+
             </div>
 
-            
+
         </Section>
-    ) ;
+    );
 };
 
-const T_basic_tech_1 = ()=>{
+const T_basic_tech_1 = () => {
     return (
         <Section type="left">
             <h1>基本的な操作方法</h1>
@@ -194,7 +220,7 @@ const T_basic_tech_1 = ()=>{
             次にソースコードの出力先フォルダを選びます。
             コード変換では複数のファイルが作成されるため、
             それらを出力する<b>フォルダ（ファイルではありません！）を
-            選択</b>してください。
+                選択</b>してください。
             今回は"work内のJavaScriptコード変換フォルダ"を選択してみます。
             <ImgLine cap="出力先フォルダを選択する" src={snap21Img} />
             次にフローチャートの実行と同じように、<b>実行タイプを指定</b>します。
@@ -223,10 +249,10 @@ const T_basic_tech_1 = ()=>{
 
 
         </Section>
-    ) ;
+    );
 };
 
-const T_basic_tech_2 = ()=>{
+const T_basic_tech_2 = () => {
     return (
         <Section type="center">
             <h1 id="howto_saveProject">プロジェクトの保存と読み込み</h1>
@@ -281,147 +307,36 @@ const T_basic_tech_2 = ()=>{
 
 
 const pageList = [
-    {"tid":"1" ,
+    {
+        "pageId": "1",
+        "title": "FBEのインストール",
         "jsx":
             <T_getStart />
-        },
-    {"tid":"2" ,
+    },
+    {
+        "pageId": "2",
+        "title": "基本的な操作方法",
         "jsx":
             <T_basic_tech_1 />
 
-        },
-    {"tid":"3" ,
+    },
+    {
+        "pageId": "3",
+        "title": "プロジェクトの保存",
         "jsx":
             <T_basic_tech_2 />
 
-        },
+    },
 ];
-export const pages = pageList ;
+export const pages = pageList;
 
-
-const TutorialPage01 = (props)=>{
-    console.log(props);
-    const [pages,setPages] = useState(pageList);
-
-    console.log(props);
-    let pageIdx = -1 ;
-    pages.forEach((ele,idx)=>{
-        if(ele["tid"] === props.match.params.tid){
-            pageIdx = idx ;
-        }
-    });
-    let [nowPageIdx,setNowPageIdx] = useState(pageIdx) ;
-    console.log("nowPageIdx :"+nowPageIdx);
-    if(nowPageIdx < 0){
-        //ページが存在しない時
-        pages[nowPageIdx] = {
-            "jsx":
-                <Section type="center">
-                    <h1>ERROR !</h1>
-                    <h1>Not Found In Tutorials !</h1>
-                    このページは存在しません。URLを確かめてください。
-                    <LinkButton href="/tutorial/test1" text="チュートリアルの始めへ" />
-                    <LinkButton href="/top" text="TOPへ" />
-                </Section>
-            }; 
-    }
-
-
-    // const useStyles = makeStyles((theme) => ({
-    //     root: {
-    //       width: '100%',
-    //     },
-    //     heading: {
-    //       fontSize: theme.typography.pxToRem(15),
-    //       fontWeight: theme.typography.fontWeightRegular,
-    //     },
-    //   }));
-    // const classes = useStyles();
-
+const TutorialPage02 = (props) => {
     return (
-        <>
-            <main className="tp">
-                <Section type="center" id="tutorial_top">
-                    <h1 className="ta-center">FBE<br />チュートリアル</h1>
-                </Section>
-
-                <Section type="center" className="top-move-bt-sec">
-                    <div className="tp-move-bt-bar">
-                        {0 < nowPageIdx ?<LinkButton href={`/tutorial/${pages[nowPageIdx-1]["tid"]}`} text="前のページへ"></LinkButton>:<div></div>}
-                        {nowPageIdx < pages.length-1 ?<LinkButton href={`/tutorial/${pages[nowPageIdx+1]["tid"]}`} text="次のページへ"></LinkButton>:<div></div>}
-                    </div>
-                </Section>
-
-                {pages[nowPageIdx]["jsx"]}
-
-                <Section type="center" className="top-move-bt-sec">
-                    <div className="tp-move-bt-bar">
-                        {console.log(pages)}
-                        {0 < nowPageIdx ?<LinkButton href={`/tutorial/${pages[nowPageIdx-1]["tid"]}`} text="前のページへ"></LinkButton>:<div></div>}
-                        {nowPageIdx < pages.length-1 ?<LinkButton href={`/tutorial/${pages[nowPageIdx+1]["tid"]}`} text="次のページへ"></LinkButton>:<div></div>}
-                    </div>
-                </Section>
-
-                
-            </main>
-
-
-
-            {/* 
-
-                <Section type="left" id="sec_03">
-                    <h1>基本的な操作方法</h1>
-                    FBEでできることは主に以下の通りです。
-                    <ul>
-                        <li>フローチャートの作成</li>
-                        <li>フローチャートの実行</li>
-                        <li>フローチャートをソースコードに変換する</li>
-                    </ul>
-                    <h2 id="howto_make">フローチャートの作成</h2>
-                    今回は下のようなフローチャートの作成を通して、
-                    FBEでのフローチャート作成をマスターしましょう。
-                    <ImgLine cap="ダウンロードページ(デザインが異なる場合があります)" src={defaultImg} />
-
-                    <h2 id="howto_exe">フローチャートの実行</h2>
-                    ..................
-                    <h2 id="howto_tosrc">フローチャートをソースコードに変換する</h2>
-                    ..................
-
-                    <hr />
-
-                    <h2>その他の操作</h2>
-                    <h2 id="howto_saveProject">プロジェクトの保存</h2>
-                    FBEでは編集内容を保存するときに<b>「FBE形式」</b>で保存します。
-                    「FBE形式」の拡張子は".fbe"です。
-                    プロジェクトをFBE形式で保存するには、..................
-                    
-                </Section>
-
-            </main>
-
-            <div id="menu">
-                <ul>
-                    <h3>チュートリアル</h3>
-                    <li><a href="#sec_01">トップ</a></li>
-                    
-                    <li><a href="#sec_02">FBEのインストール</a></li>
-                    <li><a href="#install_win">　Windows</a></li>
-                    <li><a href="#install_other">　その他のOS</a></li>
-                    
-                    <li><a href="#sec_03">基本的な操作方法</a></li>
-                    <li><a href="#howto_make">フローチャートの作成</a></li>
-                    <li><a href="#howto_exe">フローチャートの実行</a></li>
-                    <li><a href="#howto_tosrc">フローチャートをソースコードに変換する</a></li>
-                    <li><a href="#howto_saveProject">プロジェクトの保存</a></li>
-
-
-                </ul>
-            </div> */}
-
-        </>
-    
-    ) ;
+        <TutorialTemplate className="tp02" match={props.match} title={<>FBE<br />チュートリアル</>} pageList={pageList} url="/fbe_tutorial/" />
+    );
 };
 
-export default TutorialPage01 ;
+
+
+export default TutorialPage02;
 
