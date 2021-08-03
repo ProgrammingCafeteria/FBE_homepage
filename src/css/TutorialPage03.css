@@ -1,4 +1,11 @@
 main.tp03 dd {
   padding-left: 3em;
 }
+main.tp03 div.code {
+  display: inline-block;
+  min-width: 50%;
+  margin: 1rem 0.3rem;
+  padding: 0.5rem;
+  background: #f3f3f3;
+}
 /*# sourceMappingURL=TutorialPage03.css.map */

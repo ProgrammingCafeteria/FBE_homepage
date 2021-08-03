@@ -18,10 +18,13 @@ import MorePage from "./pages/MorePage" ;
 import TutorialPage01 from "./pages/TutorialPage01" ;
 import TutorialPage02 from "./pages/TutorialPage02" ;
 import TutorialPage03 from "./pages/TutorialPage03" ;
+import DownloadPage from "./pages/DownloadPage" ;
+import ContactPage from "./pages/ContactPage" ;
+import CreditPage from "./pages/CreditPage" ;
 import UnknownPage from "./pages/UnknownPage" ;
 import UncreatedPage from "./pages/UncreatedPage" ;
 import Prac01 from "./pages/_Prac01" ;
-import TutorialTemplate from "./components/TutorialTemplate" ;
+
 
 
 /* 設定 */
@@ -36,11 +39,11 @@ ReactDOM.render(
         {/* 各ページ */}
         <Route exact path="/" component={TopPage} />
         <Route exact path="/top" component={TopPage} />
-        <Route exact path="/download" component={UncreatedPage} />
+        <Route exact path="/download" component={DownloadPage} />
         <Route exact path="/about" component={AboutPage} />
         <Route exact path="/more" component={MorePage} />
-        <Route exact path="/conntact" component={UncreatedPage} />
-        <Route exact path="/credit" component={UncreatedPage} />
+        <Route exact path="/conntact" component={ContactPage} />
+        <Route exact path="/credit" component={CreditPage} />
 
         <Route path="/tutorial/:pageId" component={TutorialPage02} />
         <Route path="/flowchart_tutorial/:pageId" component={TutorialPage01} />
