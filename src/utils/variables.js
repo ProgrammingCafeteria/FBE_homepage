@@ -52,18 +52,9 @@ import imgOut from "../img/out.PNG";
 import imgStart from "../img/start.PNG";
 import imgWhile from "../img/while.PNG";
 
-
-/**
- * downloadDetails
- * バージョンごと、対象OSごとにダウンロードリンクやリリースノート(メモ)などを保存している。
- * 例えばver1.0のwindows版のダウンロードリンクは
- *  downloadDetails["1.0"]["windows"]["downloadLink"] ,
- * ver1.0のwindows版のリリースノートは
- *  downloadDetails["1.0"]["windows"]["note"] ,
- */
-const downloadDetails = {
-    "beta":
-    {
+const downloadDetails = new Map() ;
+downloadDetails.set(
+    "beta",{
         "windows": {
             "downloadLink": "https://firebasestorage.googleapis.com/v0/b/flowchartbuildexecutor.appspot.com/o/fbe-win-tozip-beta.zip?alt=media&token=66cd15f6-6e11-495f-9e85-d90f674df1f9",
             "note": "Windows10で動作確認済みのexeファイルなどを含めたWindows向けパッケージです。"
@@ -73,11 +64,8 @@ const downloadDetails = {
             "note": <>Jarファイルおよび必要なファイルをまとめたJarパッケージ。実行にはJava,JavaFxが必要です。
                 <a href="https://bell-sw.com/">LibericaJDK</a>などのJDKをインストールする必要があります。</>
         }
-    },
-    //新たにバージョンを追加したらここに追加
-};
-
-
+});
+const targets = ["windows","mac","jar"] ;
 
 
 const imgs = [];
@@ -139,7 +127,7 @@ imgs2["while"] = (imgWhile);
 
 
 
-export { downloadDetails };
+export { downloadDetails,targets };
 export const flowchart_tutorial_imgs = imgs;
 export const sym_imgs = imgs2;
 
