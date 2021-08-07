@@ -63,8 +63,21 @@ downloadDetails.set(
             "downloadLink": "https://firebasestorage.googleapis.com/v0/b/flowchartbuildexecutor.appspot.com/o/fbe-jar-tozip-beta.zip?alt=media&token=8068d179-fc97-4c2b-80d8-40ae5b82e6f2",
             "note": <>Jarファイルおよび必要なファイルをまとめたJarパッケージ。実行にはJava,JavaFxが必要です。
                 <a href="https://bell-sw.com/">LibericaJDK</a>などのJDKをインストールする必要があります。</>
-        }
+        } 
 });
+downloadDetails.set(
+    "1.0",{
+        "windows": {
+            "downloadLink": "https://firebasestorage.googleapis.com/v0/b/flowchartbuildexecutor.appspot.com/o/fbe-win-tozip-beta.zip?alt=media&token=66cd15f6-6e11-495f-9e85-d90f674df1f9",
+            "note": "Windows10で動作確認済みのexeファイルなどを含めたWindows向けパッケージです。"
+        },
+        "jar": {
+            "downloadLink": "https://firebasestorage.googleapis.com/v0/b/flowchartbuildexecutor.appspot.com/o/fbe-jar-tozip-beta.zip?alt=media&token=8068d179-fc97-4c2b-80d8-40ae5b82e6f2",
+            "note": <>Jarファイルおよび必要なファイルをまとめたJarパッケージ。実行にはJava,JavaFxが必要です。
+                <a href="https://bell-sw.com/">LibericaJDK</a>などのJDKをインストールする必要があります。</>
+        } 
+});
+
 const targets = ["windows","mac","jar"] ;
 
 
